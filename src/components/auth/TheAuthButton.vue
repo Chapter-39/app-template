@@ -17,6 +17,7 @@ import { Capacitor } from "@capacitor/core";
 import { useAuthStore } from "@/stores/auth";
 import TheAppleLoginWeb from "@/components/auth/TheAppleLoginWeb.vue";
 import TheAppleLoginNative from "@/components/auth/TheAppleLoginNative.vue";
+import { LOGOUT_URL } from "@/config";
 
 const { t } = useI18n();
 const { clearToken, isAuthenticated } = useAuthStore();
@@ -26,7 +27,7 @@ const logout = () => {
   clearToken();
   localStorage.clear();
   sessionStorage.clear();
-  window.location.href = import.meta.env.VITE_LOGOUT_URL!;
+  window.location.href = LOGOUT_URL;
 };
 </script>
 

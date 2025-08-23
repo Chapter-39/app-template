@@ -14,7 +14,7 @@ const envSchema = z.object({
   VITE_APPLE_SERVICE_ID: z.string().min(1, "VITE_APPLE_SERVICE_ID is required"),
   VITE_APPLE_REDIRECT_URI: z
     .string()
-    .regex(/^https?:\/\/.+/, "APPLE_REDIRECT_URI must be a valid URL"),
+    .regex(/^https?:\/\/.+/, "VITE_APPLE_REDIRECT_URI must be a valid URL"),
   VITE_APPLE_SCOPE: z.string().min(3, "VITE_APPLE_SCOPE is required"),
   VITE_SERVER_ORIGIN: z.string().min(1, "VITE_SERVER_ORIGIN is required"),
   VITE_SERVER_ALLOWED_HOSTS: z.string().min(1, "VITE_SERVER_ALLOWED_HOSTS is required"),
