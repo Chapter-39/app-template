@@ -4,4 +4,3 @@
 - How to file: open a GitHub issue using the Bug Report template.
 - Response times: triage within 3–5 business days; resolution depends on severity and maintainer availability.
 - Out of scope: new features, large refactors, and non-critical enhancements.
-

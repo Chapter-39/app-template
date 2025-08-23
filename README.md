@@ -80,23 +80,23 @@ npm install
 
 ```ts
 // src/composables/useDevice.ts
-import { Device } from '@capacitor/device'
-import { ref } from 'vue'
+import { Device } from "@capacitor/device";
+import { ref } from "vue";
 
 export function useDeviceInfo() {
-  const device = ref(null)
+  const device = ref(null);
   const getDevice = async () => {
-    device.value = await Device.getInfo()
-  }
-  return { device, getDevice }
+    device.value = await Device.getInfo();
+  };
+  return { device, getDevice };
 }
 ```
 
 ```vue
 <script setup lang="ts">
-import { useDeviceInfo } from '@/composables/useDevice'
-const { device, getDevice } = useDeviceInfo()
-onMounted(getDevice)
+import { useDeviceInfo } from "@/composables/useDevice";
+const { device, getDevice } = useDeviceInfo();
+onMounted(getDevice);
 </script>
 <template>
   <pre>{{ device }}</pre>
@@ -107,27 +107,29 @@ onMounted(getDevice)
 
 ## 💻 Scripts disponibles
 
-| Comando                                     | Descripción                                          |
-|---------------------------------------------|------------------------------------------------------|
-| `npm run dev`                               | Inicia el servidor de desarrollo con hot reload.     |
-| `npm run build`                             | Compila y minifica para producción.                  |
-| `npm run preview`                           | Previsualiza el build de producción localmente.      |
-| `npm run test:unit`                         | Ejecuta las pruebas unitarias con Vitest.            |
-| `npm run test:e2e`                          | Ejecuta las pruebas end-to-end con Playwright.       |
-| `npm run lint`                              | Analiza y corrige el código con ESLint.              |
-| `npx cap sync`                              | Sincroniza la app web con Capacitor.                 |
-| `npx cap open android/ios`                  | Abre en el IDE correspondiente.                      |
+| Comando                    | Descripción                                      |
+| -------------------------- | ------------------------------------------------ |
+| `npm run dev`              | Inicia el servidor de desarrollo con hot reload. |
+| `npm run build`            | Compila y minifica para producción.              |
+| `npm run preview`          | Previsualiza el build de producción localmente.  |
+| `npm run test:unit`        | Ejecuta las pruebas unitarias con Vitest.        |
+| `npm run test:e2e`         | Ejecuta las pruebas end-to-end con Playwright.   |
+| `npm run lint`             | Analiza y corrige el código con ESLint.          |
+| `npx cap sync`             | Sincroniza la app web con Capacitor.             |
+| `npx cap open android/ios` | Abre en el IDE correspondiente.                  |
 
 ---
 
 ## 🧪 Testing
 
 ### Unit Tests (Vitest)
+
 ```sh
 npm run test:unit
 ```
 
 ### End-to-End (Playwright)
+
 ```sh
 npx playwright install # solo la primera vez
 npm run build
@@ -135,6 +137,7 @@ npm run test:e2e
 ```
 
 Opciones:
+
 ```sh
 npm run test:e2e -- --project=chromium
 npm run test:e2e -- tests/example.spec.ts

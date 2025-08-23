@@ -5,4 +5,3 @@
 - Response window: initial triage within 5 business days; fixes prioritized based on severity.
 
 Please do not disclose vulnerabilities publicly until a fix or mitigation is available.
-
