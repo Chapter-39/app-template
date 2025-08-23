@@ -1,6 +1,12 @@
 # 🌥️ App Template
 
-[![Node.js](https://img.shields.io/badge/node-%3E%3D18-green)](https://nodejs.org/)
+> Project Status: Maintenance Mode
+
+This repository is in maintenance mode. We accept critical bug fixes, security patches, and CI/docs chores only. Feature requests are not in scope. To report a bug, please open a GitHub issue using the Bug Report template and review support expectations in SUPPORT.md.
+
+[View Support Policy](SUPPORT.md) · [Security Policy](SECURITY.md)
+
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-green)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-%3E%3D9-red)](https://www.npmjs.com/)
 ![Private Repo](https://img.shields.io/badge/status-private-lightgrey)
 ![Vite](https://img.shields.io/badge/vite-%5E5-blue)

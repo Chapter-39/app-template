@@ -1,3 +1,30 @@
+# Repository Status: Maintenance Mode
+
+Only critical bug fixes, security patches, and CI/docs chores are accepted. No new features are planned. Use the existing npm scripts and CI commands for linting and formatting, and follow the support and security policies below.
+
+## Support & Issue Policy
+- Scope: bug reports and security issues only.
+- Use: GitHub Bug Report template to file issues.
+- Response: triage within 3–5 business days.
+- Out of scope: new features and large refactors.
+
+## Release Cadence
+- Ad hoc patch releases for critical fixes only.
+- No scheduled feature releases in maintenance mode.
+
+## Dependency Policy
+- Dependabot manages weekly npm updates (security, patch/minor).
+- No interactive upgrades here; land low-risk updates with CI green.
+
+## Backport Policy
+- Backports are generally not performed; fixes target the default branch.
+- Exception only for severe security issues as capacity allows.
+
+## Change Control
+- Conventional Commits required; small, focused PRs.
+- CI runs `npm ci`, `npm run lint`, and `npm run format:check`; tests run only if a `test` script exists.
+- See SECURITY.md and SUPPORT.md for policies; CI workflow lives at `.github/workflows/ci.yml`.
+
 # Repository Guidelines
 
 ## Project Structure & Module Organization
