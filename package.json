@@ -16,7 +16,9 @@
     "clean:install": "npm run clean:all && npm run clean:cache && npm install",
     "dev": "vite",
     "format": "prettier --write src",
+    "format:check": "prettier --check .",
     "lint": "eslint src --fix",
+    "lint:fix": "npm run lint",
     "lint:style": "stylelint \"**/*.{vue,scss,css}\" --fix",
     "prepare": "husky",
     "preview": "vite preview",
@@ -77,6 +79,9 @@
     "vite-plugin-vue-devtools": "^8.0.0",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "lint-staged": {
     "*.{ts, vue}": [
