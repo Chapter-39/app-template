@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="feat: update environment variables and configuration for app template">
-      <change afterPath="$PROJECT_DIR$/.codex/prompts/real.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.6. Pods" />
         <item itemvalue="npm.3. Sync" />
         <item itemvalue="npm.2. Build" />
-        <item itemvalue="npm.1. Clean" />
       </list>
     </recent_temporary>
   </component>
