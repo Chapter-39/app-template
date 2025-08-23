@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update workspace.xml to remove obsolete change entry">
-      <change beforePath="$PROJECT_DIR$/src/components/auth/TheAuthButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheAuthButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.ts" afterDir="false" />
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update environment variable validation and refactor logout URL handling">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.6. Pods" />
         <item itemvalue="npm.3. Sync" />
         <item itemvalue="npm.2. Build" />
+        <item itemvalue="npm.1. Clean" />
+        <item itemvalue="npm.6. Pods" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +169,7 @@
     <MESSAGE value="refactor: rename minimal-template.iml to app-template.iml" />
     <MESSAGE value="feat: update environment variables and configuration for app template" />
     <MESSAGE value="chore: update workspace.xml to remove obsolete change entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update workspace.xml to remove obsolete change entry" />
+    <MESSAGE value="chore: update environment variable validation and refactor logout URL handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update environment variable validation and refactor logout URL handling" />
   </component>
 </project>
