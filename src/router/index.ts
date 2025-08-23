@@ -38,7 +38,7 @@ export function updateDocumentTitle() {
     .find((r) => r.meta && r.meta.title);
   if (nearestWithTitle) {
     const rawTitle = nearestWithTitle.meta.title as string;
-    document.title = `${i18n.global.t(rawTitle)} | Solvo`;
+    document.title = `${i18n.global.t(rawTitle)} | App Template`;
   }
 }
 

@@ -1,4 +1,4 @@
-# 🌥️ Solvo App
+# 🌥️ App Template
 
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-green)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-%3E%3D9-red)](https://www.npmjs.com/)
@@ -8,7 +8,7 @@
 ![TypeScript](https://img.shields.io/badge/typescript-ready-blue)
 ![Capacitor](https://img.shields.io/badge/capacitor-integrated-blueviolet)
 
-> **Solvo App** es la interfaz web oficial del ecosistema **Solvo** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
+> **App Template** es la interfaz web oficial del ecosistema **Chapter 39** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
 
 ---
 
@@ -49,7 +49,7 @@ npm install
    ```
 2. **Inicializar Capacitor**
    ```sh
-   npx cap init solvo.app com.solvo.app
+   npx cap init vasa.app-dev me.vasa.app-dev
    ```
 3. **Agregar plataformas**
    ```sh
@@ -140,7 +140,7 @@ npm run test:e2e -- --debug
 ## 📂 Estructura del proyecto
 
 ```plaintext
-solvo-app/
+app-template/
  ├─ public/          # Recursos estáticos
  ├─ src/
  │   ├─ assets/      # Imágenes, estilos globales
