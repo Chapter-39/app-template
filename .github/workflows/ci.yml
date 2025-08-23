@@ -1,10 +1,8 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  push: {}
+  pull_request: {}
 
 jobs:
   ci:
@@ -27,3 +25,12 @@ jobs:
 
       - name: Prettier check
         run: npm run format:check
+
+      - name: Test (if present)
+        if: "${{ hashFiles('package.json') != '' }}"
+        run: |
+          if npm run | grep -q " test\b"; then
+            npm test
+          else
+            echo "No test script found; skipping"
+          fi
