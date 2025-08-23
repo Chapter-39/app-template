@@ -6,13 +6,6 @@ This repository is in maintenance mode. We accept critical bug fixes, security p
 
 [View Support Policy](SUPPORT.md) · [Security Policy](SECURITY.md)
 
-[![Node.js](https://img.shields.io/badge/node-%3E%3D20-green)](https://nodejs.org/)
-[![npm](https://img.shields.io/badge/npm-%3E%3D9-red)](https://www.npmjs.com/)
-![Private Repo](https://img.shields.io/badge/status-private-lightgrey)
-![Vite](https://img.shields.io/badge/vite-%5E5-blue)
-![Vue 3](https://img.shields.io/badge/vue-3.x-brightgreen)
-![TypeScript](https://img.shields.io/badge/typescript-ready-blue)
-![Capacitor](https://img.shields.io/badge/capacitor-integrated-blueviolet)
 
 > **App Template** es la interfaz web oficial del ecosistema **Chapter 39** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
 
