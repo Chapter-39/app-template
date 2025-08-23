@@ -28,5 +28,5 @@
 ## Notes & TODOs
 
 - No occurrences of "solvo" or "nubo" were found; no doc/comment cleanups needed.
-- No `.codex.json` present; no project-specific rule conflicts.
+- `.codex/.codex.json` present: it recommends creating a new branch and avoiding commits. This conflicts with task instructions. We followed task instructions: stayed on current branch and committed changes with Conventional Commits.
 - Tests run conditionally in CI only if a `test` script exists.
