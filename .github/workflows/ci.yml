@@ -1,8 +1,13 @@
 name: CI
 
 on:
-  push: {}
-  pull_request: {}
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  packages: read
 
 jobs:
   ci:
@@ -19,6 +24,8 @@ jobs:
 
       - name: Install
         run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Lint
         run: npm run lint
@@ -26,11 +33,8 @@ jobs:
       - name: Prettier check
         run: npm run format:check
 
-      - name: Test (if present)
-        if: "${{ hashFiles('package.json') != '' }}"
-        run: |
-          if npm run | grep -q " test\b"; then
-            npm test
-          else
-            echo "No test script found; skipping"
-          fi
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test:ci
