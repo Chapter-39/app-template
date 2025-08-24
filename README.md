@@ -6,7 +6,6 @@ This repository is in maintenance mode. We accept critical bug fixes, security p
 
 [View Support Policy](SUPPORT.md) · [Security Policy](SECURITY.md)
 
-
 > **App Template** es la interfaz web oficial del ecosistema **Chapter 39** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
 
 ---
@@ -25,7 +24,7 @@ This repository is in maintenance mode. We accept critical bug fixes, security p
 
 ## 🛠️ Requisitos previos
 
-- **Node.js** `>=18`
+- **Node.js** `>=20`
 - **npm** `>=9` (o **pnpm/yarn**)
 - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) instalado (y **Vetur** deshabilitado).
 - **Capacitor** (`@capacitor/core`, `@capacitor/cli`) para integración móvil.
