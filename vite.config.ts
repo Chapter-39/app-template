@@ -34,6 +34,9 @@ export default defineConfig({
   server: {
     host: true,
     origin: process.env.VITE_SERVER_ORIGIN!,
-    allowedHosts: process.env.VITE_SERVER_ORIGIN!.split(","),
+    allowedHosts: (process.env.VITE_SERVER_ALLOWED_HOSTS || "")
+      .split(",")
+      .map((h) => h.trim())
+      .filter(Boolean),
   },
 });

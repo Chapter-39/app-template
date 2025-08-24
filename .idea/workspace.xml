@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update SCSS imports and format scripts in package.json" />
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update workspace.xml for npm build configurations and recent changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +72,7 @@
     "npm.3. Sync.executor": "Run",
     "npm.6. Pods.executor": "Run",
     "npm.build-only.executor": "Run",
+    "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.format.executor": "Run",
     "npm.lint.executor": "Run",
@@ -94,16 +99,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="2. Build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="2. Build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="3. Sync" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -124,6 +119,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -136,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build-only" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.build-only" />
         <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.3. Sync" />
-        <item itemvalue="npm.2. Build" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +188,7 @@
     <MESSAGE value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
     <MESSAGE value="chore: add shared-template styles and update SCSS imports" />
     <MESSAGE value="chore: update SCSS imports and format scripts in package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update SCSS imports and format scripts in package.json" />
+    <MESSAGE value="chore: update workspace.xml for npm build configurations and recent changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update workspace.xml for npm build configurations and recent changes" />
   </component>
 </project>
