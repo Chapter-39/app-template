@@ -6,7 +6,7 @@ import { z } from "zod";
 const envSchema = z.object({
   VITE_APP_NAME: z.string().min(1, "VITE_APP_NAME is required"),
   VITE_APP_VERSION: z.string().min(1, "VITE_APP_VERSION is required"),
-  VITE_APP_ENV: z.string().optional(),
+  VITE_APP_ENV: z.string().min(1, "VITE_APP_ENV is required"),
   VITE_API_URL: z.string().regex(/^https?:\/\/.+/, "VITE_API_URL must be a valid URL"),
   VITE_API_WS_URI: z.string().regex(/^wss?:\/\/.+/, "VITE_API_WS_URI must be a valid wss URI"),
   VITE_APPLE_TEAM_ID: z.string().min(1, "VITE_APPLE_TEAM_ID is required"),

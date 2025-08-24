@@ -67,7 +67,7 @@ article {
 .dark {
   article {
     background:
-      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)),
       radial-gradient(circle at 30% 20%, var(--rgb-pink) 0%, transparent 50%),
       radial-gradient(circle at 70% 80%, var(--rgb-cyan) 0%, transparent 50%),
       linear-gradient(135deg, var(--rgb-purple), var(--rgb-blue));
@@ -77,14 +77,14 @@ article {
 h1 {
   @extend %type-large-title;
 
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 2px rgb(0 0 0 / 30%);
 }
 
 p,
 button {
   @extend %type-body;
 
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 2px rgb(0 0 0 / 30%);
 }
 
 footer {

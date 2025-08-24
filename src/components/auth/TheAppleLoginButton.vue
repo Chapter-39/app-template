@@ -48,6 +48,7 @@ svg {
 
 <style lang="scss" scoped>
 @use "@/styles/variables";
+
 svg {
   fill: var(--rgba-text);
 }

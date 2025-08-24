@@ -1,11 +1,16 @@
+import "dotenv/config";
+
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-// This file is used to check environment variables at build time.
-import(join(dirname(fileURLToPath(import.meta.url)), "src/config/env.ts"));
 
-import "dotenv/config";
-import { sentryVitePlugin } from "@sentry/vite-plugin";
+if (process.env.VITE_APP_ENV === "development") {
+  // This file is used to check environment variables at build time.
+  await import(join(dirname(fileURLToPath(import.meta.url)), "src/config/env.ts"));
+  console.log("Environment validated");
+}
+
 import { defineConfig } from "vite";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 // import vueDevTools from "vite-plugin-vue-devtools";
