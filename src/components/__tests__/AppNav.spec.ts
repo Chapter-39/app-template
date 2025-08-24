@@ -2,11 +2,16 @@ import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 import { createPinia } from "pinia";
 import { createRouter, createWebHistory } from "vue-router";
+import i18n from "@/i18n";
 import TheAppNav from "../TheAppNav.vue";
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [], // Add your routes here if needed
+  routes: [
+    { path: "/", component: { template: "<div />" } },
+    { path: "/about", component: { template: "<div />" } },
+    { path: "/settings", component: { template: "<div />" } },
+  ],
 });
 
 describe("TheAppNav", () => {
@@ -14,7 +19,7 @@ describe("TheAppNav", () => {
     const pinia = createPinia();
     const wrapper = mount(TheAppNav, {
       global: {
-        plugins: [pinia, router],
+        plugins: [pinia, router, i18n],
       },
     });
     await router.isReady();
