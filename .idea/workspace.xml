@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update workspace.xml for npm build configurations and recent changes">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update environment variable validation and adjust npm build configurations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#1 on vasa",
+    "git-widget-placeholder": "#2 on vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
@@ -141,9 +140,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build-only" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.build-only" />
         <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.3. Sync" />
       </list>
@@ -189,6 +188,7 @@
     <MESSAGE value="chore: add shared-template styles and update SCSS imports" />
     <MESSAGE value="chore: update SCSS imports and format scripts in package.json" />
     <MESSAGE value="chore: update workspace.xml for npm build configurations and recent changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update workspace.xml for npm build configurations and recent changes" />
+    <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update environment variable validation and adjust npm build configurations" />
   </component>
 </project>
