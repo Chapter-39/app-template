@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update environment variable validation to make VITE_APP_ENV optional">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: add CI test script to run unit and end-to-end tests sequentially">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +195,7 @@
     <MESSAGE value="chore: update workspace.xml for npm build configurations and recent changes" />
     <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
     <MESSAGE value="chore: update environment variable validation to make VITE_APP_ENV optional" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update environment variable validation to make VITE_APP_ENV optional" />
+    <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add CI test script to run unit and end-to-end tests sequentially" />
   </component>
 </project>

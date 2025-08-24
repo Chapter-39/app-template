@@ -24,7 +24,6 @@
     "preview": "vite preview",
     "test:e2e": "CI=1 playwright test",
     "test:unit": "vitest --no-watch",
-    "test:ci": "npm run test:unit && npm run test:e2e",
     "type-check": "vue-tsc --build",
     "delete-issues": "chmod +x script/delete-issues.sh && ./script/delete-issues.sh"
   },
