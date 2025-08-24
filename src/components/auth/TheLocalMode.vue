@@ -24,6 +24,6 @@ console.info(isNativeApp);
   @extend %type-callout;
 
   padding: variables.$grid 0;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px rgb(0 0 0 / 50%);
 }
 </style>

@@ -40,6 +40,7 @@ const logout = () => {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease;
+
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
