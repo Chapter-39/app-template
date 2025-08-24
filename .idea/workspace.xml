@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update environment variable validation to make VITE_APP_ENV optional">
-      <change afterPath="$PROJECT_DIR$/.stylelintignore" afterDir="false" />
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: add CI test script to run unit and end-to-end tests sequentially">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/TheAppleLoginButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheAppleLoginButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/TheAuthButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheAuthButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WelcomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +28,22 @@
     &quot;assignee&quot;: &quot;vasa-me&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Chapter-39/app-template.git",
-    "accountId": "aa11c363-1a37-4cfb-a89a-bb4bc7376806"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Chapter-39/app-template.git&quot;,
+    &quot;accountId&quot;: &quot;aa11c363-1a37-4cfb-a89a-bb4bc7376806&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "Chapter-39",
-    "repository": "app-template"
+    &quot;owner&quot;: &quot;Chapter-39&quot;,
+    &quot;repository&quot;: &quot;app-template&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -65,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#2 on vasa",
+    "git-widget-placeholder": "#3 on codex/fix-tests",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
@@ -84,6 +78,8 @@
     "npm.format.executor": "Run",
     "npm.lint.executor": "Run",
     "npm.lint:style.executor": "Run",
+    "npm.preview.executor": "Run",
+    "npm.test:e2e.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
     "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
@@ -96,32 +92,12 @@
       <recent name="$PROJECT_DIR$/src/config/default" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.test:e2e">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="format" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -147,13 +123,33 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="preview" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:e2e" />
+        <item itemvalue="npm.preview" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:style" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.format" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +195,7 @@
     <MESSAGE value="chore: update workspace.xml for npm build configurations and recent changes" />
     <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
     <MESSAGE value="chore: update environment variable validation to make VITE_APP_ENV optional" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update environment variable validation to make VITE_APP_ENV optional" />
+    <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add CI test script to run unit and end-to-end tests sequentially" />
   </component>
 </project>
