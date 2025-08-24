@@ -18,7 +18,7 @@ const { t } = useI18n();
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/type/large-default";
+@use "@/styles/type";
 @use "@/styles/variables";
 
 svg {

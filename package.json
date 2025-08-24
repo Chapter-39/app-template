@@ -28,6 +28,7 @@
     "delete-issues": "chmod +x script/delete-issues.sh && ./script/delete-issues.sh"
   },
   "dependencies": {
+    "@chapter-39/shared-template": "^0.3.1",
     "@capacitor-community/apple-sign-in": "^7.0.1",
     "@capacitor/cli": "^7.4.2",
     "@capacitor/core": "^7.4.2",

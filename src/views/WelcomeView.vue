@@ -37,7 +37,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @use "@/styles/variables";
-@use "@/styles/type/large-default";
+@use "@/styles/type";
 
 article {
   align-items: center;

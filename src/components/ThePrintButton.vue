@@ -10,7 +10,7 @@ const handleClick = () => {
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/type/large-default";
+@use "@/styles/type";
 @use "@/styles/variables";
 
 button {

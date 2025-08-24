@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update environment variable validation and refactor logout URL handling">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling">
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_type.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ThePrintButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThePrintButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/TheAppleLoginButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheAppleLoginButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors/_default-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors/_default-light.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors/_increased-contrast-dark.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors/_increased-contrast-light.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_large-default.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_medium.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_small.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_xlarge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_xsmall.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_xxlarge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/type/_xxxlarge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WelcomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +73,7 @@
     "git-widget-placeholder": "vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
-    "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template/src/config/default",
+    "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
     "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
@@ -70,6 +94,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/config/default" />
     </key>
   </component>
@@ -127,9 +152,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.3. Sync" />
         <item itemvalue="npm.2. Build" />
-        <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.6. Pods" />
       </list>
     </recent_temporary>
@@ -170,6 +195,7 @@
     <MESSAGE value="feat: update environment variables and configuration for app template" />
     <MESSAGE value="chore: update workspace.xml to remove obsolete change entry" />
     <MESSAGE value="chore: update environment variable validation and refactor logout URL handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update environment variable validation and refactor logout URL handling" />
+    <MESSAGE value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
   </component>
 </project>

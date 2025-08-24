@@ -17,7 +17,7 @@ console.info(isNativeApp);
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/type/large-default";
+@use "@/styles/type";
 @use "@/styles/variables";
 
 .the-local-mode {
