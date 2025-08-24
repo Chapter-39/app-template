@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: add shared-template styles and update SCSS imports">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
-    </list>
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update SCSS imports and format scripts in package.json" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +24,22 @@
     &quot;assignee&quot;: &quot;vasa-me&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:Chapter-39/app-template.git&quot;,
-    &quot;accountId&quot;: &quot;aa11c363-1a37-4cfb-a89a-bb4bc7376806&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Chapter-39/app-template.git",
+    "accountId": "aa11c363-1a37-4cfb-a89a-bb4bc7376806"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "Chapter-39",
+    "repository": "app-template"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -49,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "vasa",
+    "git-widget-placeholder": "#1 on vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
@@ -62,6 +67,7 @@
     "npm.2. Build.executor": "Run",
     "npm.3. Sync.executor": "Run",
     "npm.6. Pods.executor": "Run",
+    "npm.build-only.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.format.executor": "Run",
     "npm.lint.executor": "Run",
@@ -108,11 +114,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="6. Pods" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build-only" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="6. Pods" />
+        <script value="build-only" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -130,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build-only" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.3. Sync" />
         <item itemvalue="npm.2. Build" />
-        <item itemvalue="npm.6. Pods" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +182,7 @@
     <MESSAGE value="chore: update environment variable validation and refactor logout URL handling" />
     <MESSAGE value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
     <MESSAGE value="chore: add shared-template styles and update SCSS imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add shared-template styles and update SCSS imports" />
+    <MESSAGE value="chore: update SCSS imports and format scripts in package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update SCSS imports and format scripts in package.json" />
   </component>
 </project>
