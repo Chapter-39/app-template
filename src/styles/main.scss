@@ -1,0 +1,11 @@
+@use "@chapter-39/shared-template/styles/reset" as *;
+@use "@chapter-39/shared-template/styles/root" as *;
+@use "@chapter-39/shared-template/styles/colors/increased-contrast-dark" as *;
+@use "@chapter-39/shared-template/styles/colors/increased-contrast-light" as *;
+@use "@/styles/variables";
+
+.top-right-cta {
+  top: variables.$grid * 2;
+  right: variables.$grid * 2;
+  position: absolute;
+}

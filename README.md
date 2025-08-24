@@ -1,19 +1,167 @@
-# minimal-template
+# 🌥️ App Template
 
-Plantilla mínima con ESLint + Prettier + Husky + lint-staged y CI en GitHub Actions.
+> Project Status: Maintenance Mode
 
-## Scripts
+This repository is in maintenance mode. We accept critical bug fixes, security patches, and CI/docs chores only. Feature requests are not in scope. To report a bug, please open a GitHub issue using the Bug Report template and review support expectations in SUPPORT.md.
 
-- `npm run lint` / `npm run lint:fix`
-- `npm run format` / `npm run format:check`
+[View Support Policy](SUPPORT.md) · [Security Policy](SECURITY.md)
 
-## Requisitos
+> **App Template** es la interfaz web oficial del ecosistema **Chapter 39** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
 
-Node 20+.
+---
 
-## Setup
+## 📦 Características
 
-```bash
-npm ci
-npm run prepare
+- ⚡ **Vite** para un desarrollo ultra rápido.
+- 🎨 **Vue 3 + TypeScript** con tipado estricto.
+- 📱 **Capacitor** para empaquetar como app móvil (iOS/Android).
+- 🧩 Arquitectura modular para escalar fácilmente.
+- 🛡️ **ESLint + Prettier** para un código limpio y consistente.
+- ✅ **Vitest** y **Playwright** para pruebas unitarias y E2E.
+- 🔒 Diseñada para uso privado y despliegue seguro.
+
+---
+
+## 🛠️ Requisitos previos
+
+- **Node.js** `>=20`
+- **npm** `>=9` (o **pnpm/yarn**)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) instalado (y **Vetur** deshabilitado).
+- **Capacitor** (`@capacitor/core`, `@capacitor/cli`) para integración móvil.
+
+---
+
+## 🚀 Instalación
+
+```sh
+npm install
 ```
+
+---
+
+## 📱 Integración con Capacitor
+
+1. **Instalar Capacitor**
+   ```sh
+   npm install @capacitor/core @capacitor/cli
+   ```
+2. **Inicializar Capacitor**
+   ```sh
+   npx cap init vasa.app-dev me.vasa.app-dev
+   ```
+3. **Agregar plataformas**
+   ```sh
+   npx cap add android
+   npx cap add ios
+   ```
+4. **Compilar la app web**
+   ```sh
+   npm run build
+   ```
+5. **Sincronizar los archivos**
+   ```sh
+   npx cap sync
+   ```
+6. **Abrir en Android Studio o Xcode**
+   ```sh
+   npx cap open android
+   npx cap open ios
+   ```
+
+### Ejemplo de uso de Capacitor en Vue
+
+```ts
+// src/composables/useDevice.ts
+import { Device } from "@capacitor/device";
+import { ref } from "vue";
+
+export function useDeviceInfo() {
+  const device = ref(null);
+  const getDevice = async () => {
+    device.value = await Device.getInfo();
+  };
+  return { device, getDevice };
+}
+```
+
+```vue
+<script setup lang="ts">
+import { useDeviceInfo } from "@/composables/useDevice";
+const { device, getDevice } = useDeviceInfo();
+onMounted(getDevice);
+</script>
+<template>
+  <pre>{{ device }}</pre>
+</template>
+```
+
+---
+
+## 💻 Scripts disponibles
+
+| Comando                    | Descripción                                      |
+| -------------------------- | ------------------------------------------------ |
+| `npm run dev`              | Inicia el servidor de desarrollo con hot reload. |
+| `npm run build`            | Compila y minifica para producción.              |
+| `npm run preview`          | Previsualiza el build de producción localmente.  |
+| `npm run test:unit`        | Ejecuta las pruebas unitarias con Vitest.        |
+| `npm run test:e2e`         | Ejecuta las pruebas end-to-end con Playwright.   |
+| `npm run lint`             | Analiza y corrige el código con ESLint.          |
+| `npx cap sync`             | Sincroniza la app web con Capacitor.             |
+| `npx cap open android/ios` | Abre en el IDE correspondiente.                  |
+
+---
+
+## 🧪 Testing
+
+### Unit Tests (Vitest)
+
+```sh
+npm run test:unit
+```
+
+### End-to-End (Playwright)
+
+```sh
+npx playwright install # solo la primera vez
+npm run build
+npm run test:e2e
+```
+
+Opciones:
+
+```sh
+npm run test:e2e -- --project=chromium
+npm run test:e2e -- tests/example.spec.ts
+npm run test:e2e -- --debug
+```
+
+---
+
+## 📂 Estructura del proyecto
+
+```plaintext
+app-template/
+ ├─ public/          # Recursos estáticos
+ ├─ src/
+ │   ├─ assets/      # Imágenes, estilos globales
+ │   ├─ components/  # Componentes reutilizables
+ │   ├─ composables/ # Lógica reutilizable
+ │   ├─ router/      # Configuración de rutas
+ │   ├─ store/       # Estado global
+ │   ├─ views/       # Vistas principales
+ │   └─ main.ts      # Punto de entrada
+ ├─ tests/           # Pruebas unitarias y e2e
+ ├─ capacitor.config.ts # Configuración de Capacitor
+ └─ vite.config.ts   # Configuración de Vite
+```
+
+---
+
+## 📜 Licencia
+
+Privado — Todos los derechos reservados.
+
+---
+
+❤️ Hecho con dedicación por **Vasa**

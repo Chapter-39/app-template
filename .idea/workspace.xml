@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update SCSS imports and format scripts in package.json" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vasa-me&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Chapter-39/app-template.git",
+    "accountId": "aa11c363-1a37-4cfb-a89a-bb4bc7376806"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "Chapter-39",
+    "repository": "app-template"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="31e0woyY6J4l4nBKJoBqsRnmNVY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#1 on vasa",
+    "javascript.nodejs.core.library.configured.version": "24.4.1",
+    "javascript.nodejs.core.library.typings.version": "24.3.0",
+    "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/stylelint",
+    "nodejs_package_manager_path": "npm",
+    "npm.1. Clean.executor": "Run",
+    "npm.2. Build.executor": "Run",
+    "npm.3. Sync.executor": "Run",
+    "npm.6. Pods.executor": "Run",
+    "npm.build-only.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.format.executor": "Run",
+    "npm.lint.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
+    "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/config/default" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.1. Clean">
+    <configuration name="1. Clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="1. Clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="2. Build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="2. Build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="3. Sync" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="3. Sync" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build-only" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build-only" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build-only" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.1. Clean" />
+        <item itemvalue="npm.3. Sync" />
+        <item itemvalue="npm.2. Build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="2" Folder0="$PROJECT_DIR$/../../dictionaries-master/es" Folder1="$PROJECT_DIR$/../../dictionaries-master/sr" CustomDictionaries="2" CustomDictionary0="$PROJECT_DIR$/../../dictionaries-master/es/es_ES.dic" CustomDictionary1="$PROJECT_DIR$/../../dictionaries-master/sr/sr.dic" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="" />
+      <created>1755869471501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755869471501</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/eslint.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add initial type definitions and constants for profile, settings, and authentication" />
+    <MESSAGE value="refactor: rename minimal-template.iml to app-template.iml" />
+    <MESSAGE value="feat: update environment variables and configuration for app template" />
+    <MESSAGE value="chore: update workspace.xml to remove obsolete change entry" />
+    <MESSAGE value="chore: update environment variable validation and refactor logout URL handling" />
+    <MESSAGE value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
+    <MESSAGE value="chore: add shared-template styles and update SCSS imports" />
+    <MESSAGE value="chore: update SCSS imports and format scripts in package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update SCSS imports and format scripts in package.json" />
+  </component>
+</project>
