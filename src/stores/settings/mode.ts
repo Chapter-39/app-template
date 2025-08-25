@@ -1,7 +1,7 @@
 import { computed, ref } from "vue";
 import { defineStore } from "pinia";
 import { AVAILABLE_MODES, DEFAULT_MODE, LOGIN_URL, LOGOUT_URL, SETTINGS_MODE_KEY } from "@/config";
-import type { Mode } from "@types";
+import type { Mode } from "@chapter-39/shared-template";
 import { useAuthStore } from "@/stores/auth.ts";
 
 export const useModeStore = defineStore(SETTINGS_MODE_KEY, () => {

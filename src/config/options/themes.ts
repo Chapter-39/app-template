@@ -1,4 +1,4 @@
-import type { Theme } from "@types";
+import type { Theme } from "@chapter-39/shared-template";
 
 export const AVAILABLE_THEMES: Theme[] = [
   "system",

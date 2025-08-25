@@ -5,7 +5,7 @@ import { handleError } from "@/utils/errorHandler";
 import { useAuthStore } from "@/stores/auth";
 import { httpClient } from "@/services/httpClient";
 import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE, SETTINGS_LANGUAGE_KEY } from "@/config";
-import type { Language } from "@types";
+import type { Language } from "@chapter-39/shared-template";
 
 export const useLanguageStore = defineStore(SETTINGS_LANGUAGE_KEY, () => {
   const savedLanguage = localStorage.getItem(SETTINGS_LANGUAGE_KEY);

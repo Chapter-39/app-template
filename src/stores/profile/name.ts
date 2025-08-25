@@ -4,7 +4,7 @@ import { handleError } from "@/utils/errorHandler";
 import { useAuthStore } from "@/stores/auth";
 import { httpClient } from "@/services/httpClient";
 import { PROFILE_NAME_KEY } from "@/config";
-import type { Name } from "@types";
+import type { Name } from "@chapter-39/shared-template";
 
 export const useNameStore = defineStore(PROFILE_NAME_KEY, () => {
   const savedName = localStorage.getItem(PROFILE_NAME_KEY);
