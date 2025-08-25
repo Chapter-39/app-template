@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 import { watch } from "vue";
 import { useLanguageStore } from "@/stores/settings/language";
-import type { Language } from "@types";
+import type { Language } from "@chapter-39/shared-template";
 import en from "@/languages/en";
 import es from "@/languages/es";
 import sr from "@/languages/sr";

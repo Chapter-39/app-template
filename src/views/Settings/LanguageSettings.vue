@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useLanguageStore } from "@/stores/settings/language";
 import { AVAILABLE_LANGUAGES } from "@/config";
-import type { Language } from "@types";
+import type { Language } from "@chapter-39/shared-template";
 
 const languageStore = useLanguageStore();
 

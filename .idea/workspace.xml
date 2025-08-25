@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: add CI test script to run unit and end-to-end tests sequentially">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update npm scripts for formatting and linting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/declarations/jsonwebtoken.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#3 on codex/fix-tests",
+    "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
+    "git-widget-placeholder": "vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
@@ -80,8 +80,9 @@
     "npm.lint:style.executor": "Run",
     "npm.preview.executor": "Run",
     "npm.test:e2e.executor": "Run",
+    "npm.type-check.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
     "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -92,12 +93,22 @@
       <recent name="$PROJECT_DIR$/src/config/default" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:e2e">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.1. Clean">
+    <configuration name="1. Clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="1. Clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -113,26 +124,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:style" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint:style" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="preview" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -143,13 +134,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="type-check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="type-check" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:e2e" />
-        <item itemvalue="npm.preview" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.lint:style" />
+        <item itemvalue="npm.type-check" />
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.1. Clean" />
+        <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +197,8 @@
     <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
     <MESSAGE value="chore: update environment variable validation to make VITE_APP_ENV optional" />
     <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add CI test script to run unit and end-to-end tests sequentially" />
+    <MESSAGE value="chore: update type imports to use shared-template module" />
+    <MESSAGE value="chore: update npm scripts for formatting and linting" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update npm scripts for formatting and linting" />
   </component>
 </project>

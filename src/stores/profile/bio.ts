@@ -4,7 +4,7 @@ import { handleError } from "@/utils/errorHandler";
 import { useAuthStore } from "@/stores/auth";
 import { httpClient } from "@/services/httpClient";
 import { PROFILE_BIO_KEY } from "@/config";
-import type { Bio } from "@types";
+import type { Bio } from "@chapter-39/shared-template";
 
 export const useBioStore = defineStore(PROFILE_BIO_KEY, () => {
   const savedBio = localStorage.getItem(PROFILE_BIO_KEY);

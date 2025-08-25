@@ -2,7 +2,7 @@ import { useBioStore } from "@/stores/profile/bio";
 import { useLanguageStore } from "@/stores/settings/language";
 import { useNameStore } from "@/stores/profile/name";
 import { useThemeStore } from "@/stores/settings/theme.ts";
-import type { Bio, Language, Name, Theme } from "@types";
+import type { Bio, Language, Name, Theme } from "@chapter-39/shared-template";
 
 export function useSetUser() {
   const setUser = async (user: {

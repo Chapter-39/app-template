@@ -4,7 +4,7 @@ import { handleError } from "@/utils/errorHandler";
 import { useAuthStore } from "@/stores/auth";
 import { httpClient } from "@/services/httpClient";
 import { AVAILABLE_THEMES, DEFAULT_THEME, SETTINGS_THEME_KEY } from "@/config";
-import type { Theme } from "@types";
+import type { Theme } from "@chapter-39/shared-template";
 
 export const useThemeStore = defineStore(SETTINGS_THEME_KEY, () => {
   const savedTheme = localStorage.getItem(SETTINGS_THEME_KEY);

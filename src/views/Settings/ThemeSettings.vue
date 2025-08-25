@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useThemeStore } from "@/stores/settings/theme";
 import { AVAILABLE_THEMES } from "@/config";
-import type { Theme } from "@types";
+import type { Theme } from "@chapter-39/shared-template";
 
 const themeStore = useThemeStore();
 

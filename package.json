@@ -24,8 +24,7 @@
     "preview": "vite preview",
     "test:e2e": "CI=1 playwright test",
     "test:unit": "vitest --no-watch",
-    "type-check": "vue-tsc --build",
-    "delete-issues": "chmod +x script/delete-issues.sh && ./script/delete-issues.sh"
+    "type-check": "vue-tsc --build"
   },
   "dependencies": {
     "@chapter-39/shared-template": "^0.3.1",
