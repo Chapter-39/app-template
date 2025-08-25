@@ -122,21 +122,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="format" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="preview" />
+        <script value="lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -165,10 +165,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.type-check" />
+        <item itemvalue="npm.format" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.1. Clean" />
         <item itemvalue="npm.test:e2e" />
-        <item itemvalue="npm.preview" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
