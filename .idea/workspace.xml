@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: add CI test script to run unit and end-to-end tests sequentially">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update npm scripts for formatting and linting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composables/useSetUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/composables/useSetUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/options/languages.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/options/languages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/options/modes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/options/modes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/options/themes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/options/themes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/profile/bio.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/profile/bio.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/profile/name.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/profile/name.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/settings/language.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/settings/language.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/settings/mode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/settings/mode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/settings/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/settings/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Settings/LanguageSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/LanguageSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Settings/ThemeSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/ThemeSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Profile/Bio.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Profile/Name.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Profile/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Settings/Language.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Settings/Mode.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Settings/Theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Settings/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/declarations/jsonwebtoken.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
     "git-widget-placeholder": "vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
@@ -100,7 +82,7 @@
     "npm.test:e2e.executor": "Run",
     "npm.type-check.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
     "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -215,6 +197,8 @@
     <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
     <MESSAGE value="chore: update environment variable validation to make VITE_APP_ENV optional" />
     <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add CI test script to run unit and end-to-end tests sequentially" />
+    <MESSAGE value="chore: update type imports to use shared-template module" />
+    <MESSAGE value="chore: update npm scripts for formatting and linting" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update npm scripts for formatting and linting" />
   </component>
 </project>
