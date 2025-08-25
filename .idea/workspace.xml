@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update npm scripts for formatting and linting">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update project configuration to exclude additional directories from indexing">
+      <change afterPath="$PROJECT_DIR$/PROJECT_SUMMARY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RESUMEN_PROYECTO.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/declarations/jsonwebtoken.d.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "vasa",
+    "git-widget-placeholder": "#4 on vasa",
     "javascript.nodejs.core.library.configured.version": "24.4.1",
     "javascript.nodejs.core.library.typings.version": "24.3.0",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template",
@@ -199,6 +200,7 @@
     <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
     <MESSAGE value="chore: update type imports to use shared-template module" />
     <MESSAGE value="chore: update npm scripts for formatting and linting" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update npm scripts for formatting and linting" />
+    <MESSAGE value="chore: update project configuration to exclude additional directories from indexing" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update project configuration to exclude additional directories from indexing" />
   </component>
 </project>
