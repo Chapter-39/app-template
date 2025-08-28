@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update Sentry configuration and improve package dependencies">
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update text to English and improve Sentry configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +199,7 @@
     <MESSAGE value="chore: update type imports to use shared-template module" />
     <MESSAGE value="chore: update npm scripts for formatting and linting" />
     <MESSAGE value="chore: update project configuration to exclude additional directories from indexing" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update project configuration to exclude additional directories from indexing" />
+    <MESSAGE value="chore: update text to English and improve Sentry configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update text to English and improve Sentry configuration" />
   </component>
 </project>
