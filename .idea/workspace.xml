@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update configuration files and add translation instructions for English" />
+    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update configuration files and add translation instructions for English">
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,43 +50,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.env.ts.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "#11 on sailing",
-    "javascript.nodejs.core.library.configured.version": "24.4.1",
-    "javascript.nodejs.core.library.typings.version": "24.3.0",
-    "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template/.codex/prompts",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/stylelint",
-    "nodejs_package_manager_path": "npm",
-    "npm.1. Clean.executor": "Run",
-    "npm.2. Build.executor": "Run",
-    "npm.3. Sync.executor": "Run",
-    "npm.6. Pods.executor": "Run",
-    "npm.build-only.executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.format.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.lint:fix.executor": "Run",
-    "npm.lint:style.executor": "Run",
-    "npm.preview.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.type-check.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.env.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#11 on sailing&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.4.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.3.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/.codex/prompts&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/stylelint&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.1. Clean.executor&quot;: &quot;Run&quot;,
+    &quot;npm.2. Build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.3. Sync.executor&quot;: &quot;Run&quot;,
+    &quot;npm.6. Pods.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build-only.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.format.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:style.executor&quot;: &quot;Run&quot;,
+    &quot;npm.preview.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.type-check.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -92,6 +94,16 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -132,23 +144,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="type-check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="type-check" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.format" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.type-check" />
       </list>
     </recent_temporary>
   </component>
