@@ -99,16 +99,16 @@ onMounted(getDevice);
 
 ## 💻 Available Scripts
 
-| Command                    | Description                                      |
-| -------------------------- | ------------------------------------------------ |
-| `npm run dev`              | Start development server with hot reload.        |
-| `npm run build`            | Build and minify for production.                 |
-| `npm run preview`          | Preview the production build locally.            |
-| `npm run test:unit`        | Run unit tests with Vitest.                      |
-| `npm run test:e2e`         | Run end-to-end tests with Playwright.            |
-| `npm run lint`             | Lint and fix code with ESLint.                   |
-| `npx cap sync`             | Sync the web app with Capacitor.                 |
-| `npx cap open android/ios` | Open in the corresponding IDE.                   |
+| Command                    | Description                               |
+| -------------------------- | ----------------------------------------- |
+| `npm run dev`              | Start development server with hot reload. |
+| `npm run build`            | Build and minify for production.          |
+| `npm run preview`          | Preview the production build locally.     |
+| `npm run test:unit`        | Run unit tests with Vitest.               |
+| `npm run test:e2e`         | Run end-to-end tests with Playwright.     |
+| `npm run lint`             | Lint and fix code with ESLint.            |
+| `npx cap sync`             | Sync the web app with Capacitor.          |
+| `npx cap open android/ios` | Open in the corresponding IDE.            |
 
 ---
 

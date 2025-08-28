@@ -92,17 +92,7 @@
       <recent name="$PROJECT_DIR$/src/config/default" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.1. Clean">
-    <configuration name="1. Clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="1. Clean" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -133,6 +123,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="type-check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -145,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.format" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.type-check" />
-        <item itemvalue="npm.1. Clean" />
       </list>
     </recent_temporary>
   </component>
