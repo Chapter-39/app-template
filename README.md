@@ -6,32 +6,32 @@ This repository is in maintenance mode. We accept critical bug fixes, security p
 
 [View Support Policy](SUPPORT.md) · [Security Policy](SECURITY.md)
 
-> **App Template** es la interfaz web oficial del ecosistema **Chapter 39** — construida con **Vue 3** y **Vite**, optimizada para velocidad, modularidad y escalabilidad. Ahora con integración lista para apps móviles usando **Capacitor**.
+> App Template is the official web interface for the **Chapter 39** ecosystem — built with **Vue 3** and **Vite**, optimized for speed, modularity, and scalability. Now with ready-to-use mobile app integration via **Capacitor**.
 
 ---
 
-## 📦 Características
+## 📦 Features
 
-- ⚡ **Vite** para un desarrollo ultra rápido.
-- 🎨 **Vue 3 + TypeScript** con tipado estricto.
-- 📱 **Capacitor** para empaquetar como app móvil (iOS/Android).
-- 🧩 Arquitectura modular para escalar fácilmente.
-- 🛡️ **ESLint + Prettier** para un código limpio y consistente.
-- ✅ **Vitest** y **Playwright** para pruebas unitarias y E2E.
-- 🔒 Diseñada para uso privado y despliegue seguro.
+- ⚡ **Vite** for ultra-fast development.
+- 🎨 **Vue 3 + TypeScript** with strict typing.
+- 📱 **Capacitor** to package as a mobile app (iOS/Android).
+- 🧩 Modular architecture to scale easily.
+- 🛡️ **ESLint + Prettier** for clean and consistent code.
+- ✅ **Vitest** and **Playwright** for unit and E2E tests.
+- 🔒 Designed for private use and secure deployment.
 
 ---
 
-## 🛠️ Requisitos previos
+## 🛠️ Prerequisites
 
 - **Node.js** `>=20`
-- **npm** `>=9` (o **pnpm/yarn**)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) instalado (y **Vetur** deshabilitado).
-- **Capacitor** (`@capacitor/core`, `@capacitor/cli`) para integración móvil.
+- **npm** `>=9` (or **pnpm/yarn**)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) installed (and **Vetur** disabled).
+- **Capacitor** (`@capacitor/core`, `@capacitor/cli`) for mobile integration.
 
 ---
 
-## 🚀 Instalación
+## 🚀 Installation
 
 ```sh
 npm install
@@ -39,36 +39,36 @@ npm install
 
 ---
 
-## 📱 Integración con Capacitor
+## 📱 Capacitor Integration
 
-1. **Instalar Capacitor**
+1. **Install Capacitor**
    ```sh
    npm install @capacitor/core @capacitor/cli
    ```
-2. **Inicializar Capacitor**
+2. **Initialize Capacitor**
    ```sh
    npx cap init vasa.app-dev me.vasa.app-dev
    ```
-3. **Agregar plataformas**
+3. **Add platforms**
    ```sh
    npx cap add android
    npx cap add ios
    ```
-4. **Compilar la app web**
+4. **Build the web app**
    ```sh
    npm run build
    ```
-5. **Sincronizar los archivos**
+5. **Sync files**
    ```sh
    npx cap sync
    ```
-6. **Abrir en Android Studio o Xcode**
+6. **Open in Android Studio or Xcode**
    ```sh
    npx cap open android
    npx cap open ios
    ```
 
-### Ejemplo de uso de Capacitor en Vue
+### Example of using Capacitor in Vue
 
 ```ts
 // src/composables/useDevice.ts
@@ -97,18 +97,18 @@ onMounted(getDevice);
 
 ---
 
-## 💻 Scripts disponibles
+## 💻 Available Scripts
 
-| Comando                    | Descripción                                      |
-| -------------------------- | ------------------------------------------------ |
-| `npm run dev`              | Inicia el servidor de desarrollo con hot reload. |
-| `npm run build`            | Compila y minifica para producción.              |
-| `npm run preview`          | Previsualiza el build de producción localmente.  |
-| `npm run test:unit`        | Ejecuta las pruebas unitarias con Vitest.        |
-| `npm run test:e2e`         | Ejecuta las pruebas end-to-end con Playwright.   |
-| `npm run lint`             | Analiza y corrige el código con ESLint.          |
-| `npx cap sync`             | Sincroniza la app web con Capacitor.             |
-| `npx cap open android/ios` | Abre en el IDE correspondiente.                  |
+| Command                    | Description                               |
+| -------------------------- | ----------------------------------------- |
+| `npm run dev`              | Start development server with hot reload. |
+| `npm run build`            | Build and minify for production.          |
+| `npm run preview`          | Preview the production build locally.     |
+| `npm run test:unit`        | Run unit tests with Vitest.               |
+| `npm run test:e2e`         | Run end-to-end tests with Playwright.     |
+| `npm run lint`             | Lint and fix code with ESLint.            |
+| `npx cap sync`             | Sync the web app with Capacitor.          |
+| `npx cap open android/ios` | Open in the corresponding IDE.            |
 
 ---
 
@@ -123,12 +123,12 @@ npm run test:unit
 ### End-to-End (Playwright)
 
 ```sh
-npx playwright install # solo la primera vez
+npx playwright install # first run only
 npm run build
 npm run test:e2e
 ```
 
-Opciones:
+Options:
 
 ```sh
 npm run test:e2e -- --project=chromium
@@ -138,30 +138,30 @@ npm run test:e2e -- --debug
 
 ---
 
-## 📂 Estructura del proyecto
+## 📂 Project structure
 
 ```plaintext
 app-template/
- ├─ public/          # Recursos estáticos
+ ├─ public/          # Static assets
  ├─ src/
- │   ├─ assets/      # Imágenes, estilos globales
- │   ├─ components/  # Componentes reutilizables
- │   ├─ composables/ # Lógica reutilizable
- │   ├─ router/      # Configuración de rutas
- │   ├─ store/       # Estado global
- │   ├─ views/       # Vistas principales
- │   └─ main.ts      # Punto de entrada
- ├─ tests/           # Pruebas unitarias y e2e
- ├─ capacitor.config.ts # Configuración de Capacitor
- └─ vite.config.ts   # Configuración de Vite
+ │   ├─ assets/      # Images, global styles
+ │   ├─ components/  # Reusable components
+ │   ├─ composables/ # Reusable logic
+ │   ├─ router/      # Route configuration
+ │   ├─ store/       # Global state
+ │   ├─ views/       # Main views
+ │   └─ main.ts      # Entry point
+ ├─ tests/           # Unit and e2e tests
+ ├─ capacitor.config.ts # Capacitor configuration
+ └─ vite.config.ts   # Vite configuration
 ```
 
 ---
 
-## 📜 Licencia
+## 📜 License
 
-Privado — Todos los derechos reservados.
+Private — All rights reserved.
 
 ---
 
-❤️ Hecho con dedicación por **Vasa**
+❤️ Made with care by **Vasa**

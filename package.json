@@ -1,7 +1,7 @@
 {
   "name": "@chapter-39/app-template",
   "version": "0.1.0",
-  "description": "Aplicación frontend desarrollada con Vue.js, Vite y Pinia",
+  "description": "Frontend application built with Vue.js, Vite, and Pinia",
   "private": true,
   "type": "module",
   "scripts": {
@@ -27,12 +27,12 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@chapter-39/shared-template": "^0.3.1",
     "@capacitor-community/apple-sign-in": "^7.0.1",
     "@capacitor/cli": "^7.4.2",
     "@capacitor/core": "^7.4.2",
     "@capacitor/ios": "^7.4.2",
-    "@sentry/vite-plugin": "^4.0.2",
+    "@chapter-39/shared-template": "^0.3.1",
+    "@sentry/vite-plugin": "^4.1.1",
     "@sentry/vue": "^10.1.0",
     "axios": "^1.11.0",
     "gsap": "^3.13.0",

@@ -21,7 +21,7 @@ const login = async () => {
     try {
       const identityToken = result?.response.identityToken;
       if (!identityToken) {
-        handleError("No se recibió identityToken");
+        handleError("identityToken was not received");
         return;
       }
 
@@ -30,16 +30,16 @@ const login = async () => {
       });
 
       if (!response || !response.data) {
-        handleError("No se recibió respuesta del servidor");
+        handleError("No response received from the server");
         return;
       }
 
-      console.log("Respuesta del servidor:", response.data);
+      console.log("Server response:", response.data);
 
       const { token, user } = response.data;
 
-      console.log(token ? "Token recibido" : "No se recibió token");
-      console.log(user ? "Usuario recibido" : "No se recibió usuario");
+      console.log(token ? "Token received" : "Token was not received");
+      console.log(user ? "User received" : "User was not received");
 
       if (token) {
         const { setToken } = useAuthStore();
@@ -49,11 +49,11 @@ const login = async () => {
       const { syncUserData } = useSyncUser();
       await syncUserData();
     } catch (error) {
-      handleError(`Error al obtener identityToken ${error}`);
+      handleError(`Error obtaining identityToken ${error}`);
       return;
     }
   } catch (err) {
-    handleError(`Error en login nativo con Apple: ${err}`);
+    handleError(`Error in native Apple login: ${err}`);
   }
 };
 </script>

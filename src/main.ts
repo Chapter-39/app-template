@@ -13,16 +13,14 @@ import { useSyncUser } from "@/composables/useSyncUser.ts";
 
 const app = createApp(App);
 
-if (import.meta.env.MODE === "production") {
+if (import.meta.env.MODE === "production" && import.meta.env.VITE_SENTRY_DSN) {
   Sentry.init({
     app,
-    dsn: "https://2f92ebae7f54cb358bc834200fbefad0@o69793.ingest.us.sentry.io/4509813471248384",
+    dsn: import.meta.env.VITE_SENTRY_DSN,
     // Setting this option to true will send default PII data to Sentry.
     // For example, automatic IP address collection on events
     sendDefaultPii: true,
   });
-} else {
-  console.log("Sentry is disabled in development mode.");
 }
 
 app.use(createPinia());
