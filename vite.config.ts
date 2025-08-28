@@ -22,6 +22,7 @@ export default defineConfig({
     vue(),
     vueJsx(), // vueDevTools(),
     sentryVitePlugin({
+      authToken: process.env.SENTRY_AUTH_TOKEN!,
       org: process.env.VITE_SENTRY_ORG!,
       project: process.env.VITE_SENTRY_PROJECT!,
       telemetry: false,

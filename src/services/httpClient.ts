@@ -17,14 +17,14 @@ instance.interceptors.request.use((config) => {
   return config;
 });
 
-// Añadir token automáticamente
+// Add token automatically
 instance.interceptors.request.use((config) => {
   const { token } = useAuthStore();
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
-// Manejo de errores y refresh de token
+// Error handling and token refresh
 instance.interceptors.response.use(
   (response) => response,
   async (error) => {
