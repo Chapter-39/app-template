@@ -3,6 +3,7 @@
   "instructions": [
     "Read the configuration file .codex.json located in the .codex subdirectory of the project root and follow its rules.",
     "Create new branch codex/<task-title-slug> from main branch.",
+    "Do not start editing until you share the summary and the plan.",
     "...",
     "Execute npm run format to format the code.",
     "Execute npm run lint to lint the code."
