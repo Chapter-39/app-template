@@ -25,7 +25,7 @@ onMounted(() => {
   <article>
     <button @click="router.replace({ path: '/' })" class="top-right-cta"><X /></button>
 
-    <h1>See you ✌️</h1>
+    <h1>Nos vemos ✌️</h1>
     <p>A smooth goodbye</p>
 
     <footer>
