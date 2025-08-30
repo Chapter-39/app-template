@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="chore: update configuration files and add translation instructions for English">
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+    <list default="true" id="83cf6b5e-8fdf-46f9-a967-5caf84878732" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/vue.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/vue.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WelcomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +15,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -30,80 +27,37 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:Chapter-39/app-template.git&quot;,
     &quot;accountId&quot;: &quot;aa11c363-1a37-4cfb-a89a-bb4bc7376806&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;Chapter-39&quot;,
-    &quot;repository&quot;: &quot;app-template&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="31e0woyY6J4l4nBKJoBqsRnmNVY" />
+  <component name="ProjectId" id="31upeO1wL0FSB7C7dE3rEHhZ819" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.env.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#11 on sailing&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.4.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.3.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/.codex/prompts&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/stylelint&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.1. Clean.executor&quot;: &quot;Run&quot;,
-    &quot;npm.2. Build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.3. Sync.executor&quot;: &quot;Run&quot;,
-    &quot;npm.6. Pods.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build-only.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.format.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint:style.executor&quot;: &quot;Run&quot;,
-    &quot;npm.preview.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
-    &quot;npm.type-check.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sailing",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/stylelint",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.format.executor": "Run",
+    "npm.format:check.executor": "Run",
+    "npm.test:unit.executor": "Run",
+    "npm.type-check.executor": "Run",
+    "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/config/default" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="npm.format">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -134,11 +88,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test:unit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="lint:fix" />
+        <script value="test:unit" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="type-check" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="type-check" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -146,32 +110,26 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.lint:fix" />
-        <item itemvalue="npm.format" />
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format" />
+        <item itemvalue="npm.type-check" />
+        <item itemvalue="npm.test:unit" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="2" Folder0="$PROJECT_DIR$/../../dictionaries-master/es" Folder1="$PROJECT_DIR$/../../dictionaries-master/sr" CustomDictionaries="2" CustomDictionary0="$PROJECT_DIR$/../../dictionaries-master/es/es_ES.dic" CustomDictionary1="$PROJECT_DIR$/../../dictionaries-master/sr/sr.dic" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28919042-67b5-43f7-8bc8-3f04c19bea24" name="Changes" comment="" />
-      <created>1755869471501</created>
+      <changelist id="83cf6b5e-8fdf-46f9-a967-5caf84878732" name="Changes" comment="" />
+      <created>1756383906903</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1755869471501</updated>
+      <updated>1756383906903</updated>
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/eslint.config.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -183,25 +141,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add initial type definitions and constants for profile, settings, and authentication" />
-    <MESSAGE value="refactor: rename minimal-template.iml to app-template.iml" />
-    <MESSAGE value="feat: update environment variables and configuration for app template" />
-    <MESSAGE value="chore: update workspace.xml to remove obsolete change entry" />
-    <MESSAGE value="chore: update environment variable validation and refactor logout URL handling" />
-    <MESSAGE value="chore: update workspace.xml to reflect changes in environment variable validation and logout URL handling" />
-    <MESSAGE value="chore: add shared-template styles and update SCSS imports" />
-    <MESSAGE value="chore: update SCSS imports and format scripts in package.json" />
-    <MESSAGE value="chore: update workspace.xml for npm build configurations and recent changes" />
-    <MESSAGE value="chore: update environment variable validation and adjust npm build configurations" />
-    <MESSAGE value="chore: update environment variable validation to make VITE_APP_ENV optional" />
-    <MESSAGE value="chore: add CI test script to run unit and end-to-end tests sequentially" />
-    <MESSAGE value="chore: update type imports to use shared-template module" />
-    <MESSAGE value="chore: update npm scripts for formatting and linting" />
-    <MESSAGE value="chore: update project configuration to exclude additional directories from indexing" />
-    <MESSAGE value="chore: update text to English and improve Sentry configuration" />
-    <MESSAGE value="chore: update configuration files and add translation instructions for English" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update configuration files and add translation instructions for English" />
   </component>
 </project>
