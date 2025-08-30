@@ -57,7 +57,7 @@ Only critical bug fixes, security patches, and CI/docs chores are accepted. No n
 
 ## Testing Guidelines
 
-- No test framework is bundled. Recommended: Vitest or Jest.
+- Standard: Vitest for unit/integration tests; Playwright for E2E.
 - Place tests in `tests/**` or alongside sources as `*.test.ts`/`*.spec.ts`.
 - Aim for meaningful unit coverage on utilities and modules that contain logic. Add lightweight integration tests when applicable.
 - Run linting and formatting in CI; extend the workflow when tests are added.
