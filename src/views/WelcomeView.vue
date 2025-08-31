@@ -25,8 +25,8 @@ onMounted(() => {
   <article>
     <button @click="router.replace({ path: '/' })" class="top-right-cta"><X /></button>
 
-    <h1>Nos vemos ✌️</h1>
-    <p>A smooth goodbye</p>
+    <h1>Chapter 39</h1>
+    <p>Foundations for hybrid apps</p>
 
     <footer>
       <TheAuthButton />
@@ -67,7 +67,7 @@ article {
 .dark {
   article {
     background:
-      linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)),
+      linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 70%)),
       radial-gradient(circle at 30% 20%, var(--rgb-pink) 0%, transparent 50%),
       radial-gradient(circle at 70% 80%, var(--rgb-cyan) 0%, transparent 50%),
       linear-gradient(135deg, var(--rgb-purple), var(--rgb-blue));
@@ -77,13 +77,19 @@ article {
 h1 {
   @extend %type-large-title;
 
+  color: var(--rgba-text);
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom:
+    variables.$grid * 0,
+    5;
   text-shadow: 0 0 2px rgb(0 0 0 / 30%);
 }
 
-p,
-button {
+p {
   @extend %type-body;
 
+  color: var(--rgba-text-secondary);
   text-shadow: 0 0 2px rgb(0 0 0 / 30%);
 }
 

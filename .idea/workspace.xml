@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: update clean:all script and add unit test configuration in workspace">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: update unit test command to include coverage and enhance README documentation">
+      <change beforePath="$PROJECT_DIR$/.idea/app-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app-template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/vue.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/vue.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WelcomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "sailing",
+    "git-widget-placeholder": "#14 on sailing",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,9 +71,12 @@
     "nodejs_package_manager_path": "npm",
     "npm.1. Clean.executor": "Run",
     "npm.clean:all.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.format.executor": "Run",
+    "npm.lint.executor": "Run",
     "npm.test:unit.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.spelling",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/vasa/Developer/@Chapter-39/app-template/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -83,21 +87,21 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="1. Clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="1. Clean" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="clean:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="clean:all" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -135,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.format" />
         <item itemvalue="npm.test:unit" />
         <item itemvalue="npm.clean:all" />
-        <item itemvalue="npm.1. Clean" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +161,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".gitattributes" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -173,6 +180,10 @@
     <MESSAGE value="chore: add environment variables and GitHub Actions secrets documentation in README" />
     <MESSAGE value="chore: update package.json and package-lock.json for dependency upgrades and add Netlify and Sentry release workflows" />
     <MESSAGE value="chore: update clean:all script and add unit test configuration in workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update clean:all script and add unit test configuration in workspace" />
+    <MESSAGE value="chore: update unit test command to include coverage and enhance README documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update unit test command to include coverage and enhance README documentation" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../Developer/@Chapter-39/app-template/coverage/lcov.info" NAME="lcov.info" MODIFIED="1756657286746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

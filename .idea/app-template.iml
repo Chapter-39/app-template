@@ -10,6 +10,13 @@
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/playwright-report" />
       <excludeFolder url="file://$MODULE_DIR$/test-results" />
+      <excludeFolder url="file://$MODULE_DIR$/coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/App.xcodeproj/project.xcworkspace/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/App.xcodeproj/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/App.xcworkspace/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/App/public" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/Pods" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/capacitor-cordova-ios-plugins" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
