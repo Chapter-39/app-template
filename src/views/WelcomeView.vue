@@ -1,29 +1,6 @@
-<script setup lang="ts">
-import { onMounted } from "vue";
-// import { gsap } from "gsap";
-import TheAuthButton from "@/components/auth/TheAuthButton.vue";
-import TheLocalMode from "@/components/auth/TheLocalMode.vue";
-import router from "@/router";
-import { useAuthStore } from "@/stores/auth";
-import { useModeStore } from "@/stores/settings/mode";
-import { X } from "lucide-vue-next";
-
-const { isAuthenticated } = useAuthStore();
-const { isLocalMode } = useModeStore();
-
-onMounted(() => {
-  console.info(`User authenticated: ${isAuthenticated}`);
-  console.info(`Local mode: ${isLocalMode}`);
-});
-
-// onMounted(() => {
-//   gsap.from("#animated-text", { opacity: 0, y: 20, duration: 2 });
-// });
-</script>
-
 <template>
   <article>
-    <button @click="router.replace({ path: '/' })" class="top-right-cta"><X /></button>
+    <button @click="setLocalMode" class="top-right-cta"><X /></button>
 
     <h1>Chapter 39</h1>
     <p>Foundations for hybrid apps</p>
@@ -34,6 +11,31 @@ onMounted(() => {
     </footer>
   </article>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import TheAuthButton from "@/components/auth/TheAuthButton.vue";
+import TheLocalMode from "@/components/auth/TheLocalMode.vue";
+import router from "@/router";
+import { useAuthStore } from "@/stores/auth";
+import { useModeStore } from "@/stores/settings/mode";
+import { X } from "lucide-vue-next";
+
+const { isAuthenticated } = useAuthStore();
+const { isLocalMode, setMode } = useModeStore();
+
+const setLocalMode = () => {
+  if (!isLocalMode) {
+    setMode("local");
+  }
+  router.replace({ path: "/" });
+};
+
+onMounted(() => {
+  console.info(`User authenticated: ${isAuthenticated}`);
+  console.info(`Local mode: ${isLocalMode}`);
+});
+</script>
 
 <style lang="scss" scoped>
 @use "@/styles/variables";
@@ -80,9 +82,7 @@ h1 {
   color: var(--rgba-text);
   font-weight: 900;
   letter-spacing: 1px;
-  margin-bottom:
-    variables.$grid * 0,
-    5;
+  margin-bottom: variables.$grid;
   text-shadow: 0 0 2px rgb(0 0 0 / 30%);
 }
 

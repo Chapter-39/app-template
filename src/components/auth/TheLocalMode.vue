@@ -8,14 +8,10 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import { Capacitor } from "@capacitor/core";
 import { useModeStore } from "@/stores/settings/mode";
 
 const { t } = useI18n();
-const isNativeApp = Capacitor.isNativePlatform();
 const { setMode } = useModeStore();
-
-console.info(isNativeApp);
 </script>
 
 <style lang="scss" scoped>
