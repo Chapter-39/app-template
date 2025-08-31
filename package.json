@@ -1,7 +1,7 @@
 {
   "name": "@chapter-39/app-template",
   "version": "0.1.0",
-  "description": "Frontend application built with Vue.js, Vite, and Pinia",
+  "description": "Hybrid mobile app template using Vue 3, Vite, Capacitor, Pinia, i18n, Sentry, Playwright, Vitest, ESLint, Prettier, Stylelint, Husky and more.",
   "private": true,
   "type": "module",
   "scripts": {
