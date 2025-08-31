@@ -11,7 +11,7 @@
     "6. Pods": "chmod +x script/pod-install.sh && script/pod-install.sh",
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
-    "clean:all": "rm -rf dist node_modules && rm package-lock.json",
+    "clean:all": "rm -rf dist node_modules playwright-report test-results && rm package-lock.json",
     "clean:cache": "npm cache clean --force && npm cache verify",
     "clean:install": "npm run clean:all && npm run clean:cache && npm install",
     "dev": "vite",
