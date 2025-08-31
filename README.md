@@ -104,7 +104,7 @@ onMounted(getDevice);
 | `npm run dev`              | Start development server with hot reload. |
 | `npm run build`            | Build and minify for production.          |
 | `npm run preview`          | Preview the production build locally.     |
-| `npm run test:unit`        | Run unit tests with Vitest.               |
+| `npm run test:unit`        | Run unit tests with coverage (Vitest).    |
 | `npm run test:e2e`         | Run end-to-end tests with Playwright.     |
 | `npm run lint`             | Lint and fix code with ESLint.            |
 | `npx cap sync`             | Sync the web app with Capacitor.          |
@@ -119,6 +119,8 @@ onMounted(getDevice);
 ```sh
 npm run test:unit
 ```
+
+Generates coverage reports in `coverage/` (HTML, text, lcov). Open `coverage/index.html` locally to inspect detailed file coverage, or consume `coverage/lcov.info` in external tools.
 
 ### End-to-End (Playwright)
 
@@ -143,6 +145,7 @@ npm run test:e2e -- --debug
 Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`import.meta.env.*`) y `process.env.*` durante build/configuración. En CI, estas variables deben estar definidas como GitHub Action Secrets.
 
 ### Variables requeridas/optativas
+
 - VITE_APP_NAME: Nombre de la aplicación. Requerida. También usada por Capacitor.
 - VITE_APP_VERSION: Versión de la app (semver). Requerida.
 - VITE_APP_ENV: Entorno (`development` | `staging` | `production`). Requerida.
@@ -163,13 +166,16 @@ Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`impo
 - GITHUB_TOKEN: Proporcionado automáticamente por GitHub Actions (no requiere configuración). Usado por el flujo de verificación del título del PR.
 
 Notas de uso:
+
 - El plugin de Sentry en `vite.config.ts` se ejecuta durante `build` y requiere `SENTRY_AUTH_TOKEN`, `VITE_SENTRY_ORG` y `VITE_SENTRY_PROJECT` para subir sourcemaps. Si no se necesita Sentry en CI, configure estos secretos igualmente (con valores válidos) o adapte el pipeline fuera de mantenimiento.
 - El server de Vite usa `VITE_SERVER_*` solo en desarrollo/preview; son opcionales para build.
 
 ### Qué falta en tu configuración actual
+
 Has creado: `PERSONAL_ACCESS_TOKEN`, `VITE_API_URL`, `VITE_API_WS_URI`, `VITE_APPLE_BUNDLE_ID`, `VITE_APPLE_REDIRECT_URI`, `VITE_APPLE_SCOPE`, `VITE_APPLE_TEAM_ID`, `VITE_APP_ENV`, `VITE_APP_NAME`, `VITE_APP_VERSION`.
 
 Pendientes por añadir para que todo el proyecto quede cubierto:
+
 - VITE_APPLE_SERVICE_ID
 - VITE_SENTRY_ORG
 - VITE_SENTRY_PROJECT
@@ -181,9 +187,11 @@ Pendientes por añadir para que todo el proyecto quede cubierto:
 ### Cómo configurar GitHub Action Secrets
 
 Opción A — desde la interfaz web:
+
 - Repository Settings → Secrets and variables → Actions → New repository secret → añadir cada clave anterior con su valor.
 
 Opción B — con GitHub CLI (`gh`):
+
 - Ejecuta estos comandos desde la raíz del repo, sustituyendo los valores de ejemplo por los tuyos.
 
 ```sh
@@ -219,6 +227,7 @@ gh secret set PERSONAL_ACCESS_TOKEN --body "ghp_..."
 ```
 
 Consejos de seguridad:
+
 - No subas `.env` con valores reales al repositorio. Usa Secrets para CI y `.env` local solo en desarrollo.
 - Revisa los scopes del token de Sentry y del token personal de GitHub para que sean mínimos y adecuados.
 

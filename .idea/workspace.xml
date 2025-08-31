@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: update package.json and package-lock.json for dependency upgrades and add Netlify and Sentry release workflows">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: update clean:all script and add unit test configuration in workspace">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +103,26 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test:unit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -113,6 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.test:unit" />
         <item itemvalue="npm.clean:all" />
         <item itemvalue="npm.1. Clean" />
@@ -148,6 +172,7 @@
     <MESSAGE value="chore: update testing guidelines and clean up workspace configuration" />
     <MESSAGE value="chore: add environment variables and GitHub Actions secrets documentation in README" />
     <MESSAGE value="chore: update package.json and package-lock.json for dependency upgrades and add Netlify and Sentry release workflows" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update package.json and package-lock.json for dependency upgrades and add Netlify and Sentry release workflows" />
+    <MESSAGE value="chore: update clean:all script and add unit test configuration in workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update clean:all script and add unit test configuration in workspace" />
   </component>
 </project>
