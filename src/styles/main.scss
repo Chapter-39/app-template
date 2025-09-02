@@ -3,9 +3,16 @@
 @use "@chapter-39/shared-template/styles/colors/increased-contrast-dark" as *;
 @use "@chapter-39/shared-template/styles/colors/increased-contrast-light" as *;
 @use "@/styles/variables";
+@use "@/styles/mixins";
 
 .top-right-cta {
   top: variables.$grid * 2;
   right: variables.$grid * 2;
   position: absolute;
+}
+
+.safe-area {
+  @include mixins.no-select;
+  @include mixins.no-drag;
+  @include mixins.safe-area-padding;
 }

@@ -104,7 +104,7 @@ onMounted(getDevice);
 | `npm run dev`              | Start development server with hot reload. |
 | `npm run build`            | Build and minify for production.          |
 | `npm run preview`          | Preview the production build locally.     |
-| `npm run test:unit`        | Run unit tests with Vitest.               |
+| `npm run test:unit`        | Run unit tests with coverage (Vitest).    |
 | `npm run test:e2e`         | Run end-to-end tests with Playwright.     |
 | `npm run lint`             | Lint and fix code with ESLint.            |
 | `npx cap sync`             | Sync the web app with Capacitor.          |
@@ -119,6 +119,8 @@ onMounted(getDevice);
 ```sh
 npm run test:unit
 ```
+
+Generates coverage reports in `coverage/` (HTML, text, lcov). Open `coverage/index.html` locally to inspect detailed file coverage, or consume `coverage/lcov.info` in external tools.
 
 ### End-to-End (Playwright)
 
@@ -135,6 +137,99 @@ npm run test:e2e -- --project=chromium
 npm run test:e2e -- tests/example.spec.ts
 npm run test:e2e -- --debug
 ```
+
+---
+
+## 🔐 Variables de entorno y Secrets (GitHub Actions)
+
+Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`import.meta.env.*`) y `process.env.*` durante build/configuración. En CI, estas variables deben estar definidas como GitHub Action Secrets.
+
+### Variables requeridas/optativas
+
+- VITE_APP_NAME: Nombre de la aplicación. Requerida. También usada por Capacitor.
+- VITE_APP_VERSION: Versión de la app (semver). Requerida.
+- VITE_APP_ENV: Entorno (`development` | `staging` | `production`). Requerida.
+- VITE_API_URL: URL base del API (https). Requerida.
+- VITE_API_WS_URI: URL de WebSocket del API (wss). Requerida.
+- VITE_APPLE_TEAM_ID: Apple Developer Team ID. Requerida.
+- VITE_APPLE_BUNDLE_ID: Bundle ID de la app. Requerida.
+- VITE_APPLE_SERVICE_ID: Service ID para Sign in with Apple (web). Requerida para login web.
+- VITE_APPLE_REDIRECT_URI: Redirect URI configurado en el backend/Apple. Requerida.
+- VITE_APPLE_SCOPE: Scopes solicitados (por ej. `name email`). Requerida.
+- VITE_SENTRY_DSN: DSN de Sentry para errores en runtime del cliente. Opcional pero recomendado en producción.
+- VITE_SENTRY_ORG: Organización de Sentry. Requerida si se suben sourcemaps en CI.
+- VITE_SENTRY_PROJECT: Proyecto de Sentry. Requerida si se suben sourcemaps en CI.
+- SENTRY_AUTH_TOKEN: Token de Sentry para subir sourcemaps (scopes típicos: `project:write`, `org:read`). Requerida si se suben sourcemaps en CI.
+- VITE_SERVER_ORIGIN: Origin público usado por el dev/preview server. Opcional.
+- VITE_SERVER_ALLOWED_HOSTS: Lista separada por comas de hosts permitidos. Opcional.
+- PERSONAL_ACCESS_TOKEN: Token de GitHub con `read:packages` (y `repo` si aplica). Usado por CI para autenticar `npm ci` contra GitHub Packages (inyectado como `NODE_AUTH_TOKEN`).
+- GITHUB_TOKEN: Proporcionado automáticamente por GitHub Actions (no requiere configuración). Usado por el flujo de verificación del título del PR.
+
+Notas de uso:
+
+- El plugin de Sentry en `vite.config.ts` se ejecuta durante `build` y requiere `SENTRY_AUTH_TOKEN`, `VITE_SENTRY_ORG` y `VITE_SENTRY_PROJECT` para subir sourcemaps. Si no se necesita Sentry en CI, configure estos secretos igualmente (con valores válidos) o adapte el pipeline fuera de mantenimiento.
+- El server de Vite usa `VITE_SERVER_*` solo en desarrollo/preview; son opcionales para build.
+
+### Qué falta en tu configuración actual
+
+Has creado: `PERSONAL_ACCESS_TOKEN`, `VITE_API_URL`, `VITE_API_WS_URI`, `VITE_APPLE_BUNDLE_ID`, `VITE_APPLE_REDIRECT_URI`, `VITE_APPLE_SCOPE`, `VITE_APPLE_TEAM_ID`, `VITE_APP_ENV`, `VITE_APP_NAME`, `VITE_APP_VERSION`.
+
+Pendientes por añadir para que todo el proyecto quede cubierto:
+
+- VITE_APPLE_SERVICE_ID
+- VITE_SENTRY_ORG
+- VITE_SENTRY_PROJECT
+- VITE_SENTRY_DSN
+- SENTRY_AUTH_TOKEN
+- (Opcional) VITE_SERVER_ORIGIN
+- (Opcional) VITE_SERVER_ALLOWED_HOSTS
+
+### Cómo configurar GitHub Action Secrets
+
+Opción A — desde la interfaz web:
+
+- Repository Settings → Secrets and variables → Actions → New repository secret → añadir cada clave anterior con su valor.
+
+Opción B — con GitHub CLI (`gh`):
+
+- Ejecuta estos comandos desde la raíz del repo, sustituyendo los valores de ejemplo por los tuyos.
+
+```sh
+# Core
+gh secret set VITE_APP_NAME --body "MiApp"
+gh secret set VITE_APP_VERSION --body "0.1.0"
+gh secret set VITE_APP_ENV --body "production"
+
+# API / WebSocket
+gh secret set VITE_API_URL --body "https://api.ejemplo.com"
+gh secret set VITE_API_WS_URI --body "wss://api.ejemplo.com/ws"
+
+# Apple Sign In
+gh secret set VITE_APPLE_TEAM_ID --body "AB12C3D45E"
+gh secret set VITE_APPLE_BUNDLE_ID --body "com.ejemplo.app"
+gh secret set VITE_APPLE_SERVICE_ID --body "com.ejemplo.web"
+gh secret set VITE_APPLE_REDIRECT_URI --body "https://api.ejemplo.com/auth/apple/callback"
+gh secret set VITE_APPLE_SCOPE --body "name email"
+
+# Sentry (para sourcemaps en build y DSN en runtime)
+gh secret set VITE_SENTRY_ORG --body "mi-org"
+gh secret set VITE_SENTRY_PROJECT --body "mi-proyecto"
+gh secret set VITE_SENTRY_DSN --body "https://<public>@o<org>.ingest.sentry.io/<project>"
+gh secret set SENTRY_AUTH_TOKEN --body "sntrys_..."
+
+# Vite server (opcional)
+gh secret set VITE_SERVER_ORIGIN --body "https://app.ejemplo.com"
+gh secret set VITE_SERVER_ALLOWED_HOSTS --body "localhost,app.ejemplo.com"
+
+# GitHub Packages (CI)
+# Usa tu token personal con scope read:packages (el workflow lo inyecta como NODE_AUTH_TOKEN)
+gh secret set PERSONAL_ACCESS_TOKEN --body "ghp_..."
+```
+
+Consejos de seguridad:
+
+- No subas `.env` con valores reales al repositorio. Usa Secrets para CI y `.env` local solo en desarrollo.
+- Revisa los scopes del token de Sentry y del token personal de GitHub para que sean mínimos y adecuados.
 
 ---
 
