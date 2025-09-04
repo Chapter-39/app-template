@@ -162,7 +162,7 @@ Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`impo
 - SENTRY_AUTH_TOKEN: Token de Sentry para subir sourcemaps (scopes típicos: `project:write`, `org:read`). Requerida si se suben sourcemaps en CI.
 - VITE_SERVER_ORIGIN: Origin público usado por el dev/preview server. Opcional.
 - VITE_SERVER_ALLOWED_HOSTS: Lista separada por comas de hosts permitidos. Opcional.
-- PERSONAL_ACCESS_TOKEN: Token de GitHub con `read:packages` (y `repo` si aplica). Usado por CI para autenticar `npm ci` contra GitHub Packages (inyectado como `NODE_AUTH_TOKEN`).
+- PKG_GH_READ: Token de GitHub con `read:packages` (y `repo` si aplica). Usado por CI para autenticar `npm ci` contra GitHub Packages (inyectado como `NODE_AUTH_TOKEN`).
 - GITHUB_TOKEN: Proporcionado automáticamente por GitHub Actions (no requiere configuración). Usado por el flujo de verificación del título del PR.
 
 Notas de uso:
