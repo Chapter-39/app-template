@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: update project configuration and improve UI layout in components">
-      <change afterPath="$PROJECT_DIR$/src/styles/_mixins.scss" afterDir="false" />
+    <list default="true" id="4314a51f-18a5-4722-974b-5e2543852a13" name="Changes" comment="chore: add mixins for safe area padding and update component styles">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr-title-check.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr-title-check.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release-netlify.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release-netlify.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release-sentry.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release-sentry.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/TheLocalMode.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_type.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/WelcomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WelcomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHELLCHECK.PATH": "/Users/vasa/Library/Application Support/JetBrains/WebStorm2025.2/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "#14 on sailing",
+    "git-widget-placeholder": "sailing",
     "last_opened_file_path": "/Users/vasa/Developer/@Chapter-39/app-template/src/styles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -193,7 +189,8 @@
     <MESSAGE value="chore: update clean:all script and add unit test configuration in workspace" />
     <MESSAGE value="chore: update unit test command to include coverage and enhance README documentation" />
     <MESSAGE value="chore: update project configuration and improve UI layout in components" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update project configuration and improve UI layout in components" />
+    <MESSAGE value="chore: add mixins for safe area padding and update component styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add mixins for safe area padding and update component styles" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="../../../../Developer/@Chapter-39/app-template/coverage/lcov.info" NAME="lcov.info" MODIFIED="1756657286746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
