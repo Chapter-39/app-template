@@ -17,6 +17,8 @@
     "dev": "vite",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "i18n:sync:dry": "node --experimental-strip-types scripts/i18n-sync.ts",
+    "i18n:sync": "node --experimental-strip-types scripts/i18n-sync.ts --apply",
     "lint": "eslint src --fix",
     "lint:fix": "npm run lint",
     "lint:style": "stylelint \"**/*.{vue,scss,css}\" --fix",
