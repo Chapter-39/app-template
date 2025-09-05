@@ -47,10 +47,10 @@ function unescapeStringLiteral(s: string, quote: "'" | '"'): string {
   // We avoid full JSON parsing to keep behavior aligned with JS string literals.
   return s
     .replace(new RegExp(`\\\\${quote}`, "g"), quote)
-    .replace(/\\\\/g, "\\")
     .replace(/\\n/g, "\n")
     .replace(/\\r/g, "\r")
-    .replace(/\\t/g, "\t");
+    .replace(/\\t/g, "\t")
+    .replace(/\\\\/g, "\\");
 }
 
 function collectI18nKeys(srcRoot: string): string[] {
