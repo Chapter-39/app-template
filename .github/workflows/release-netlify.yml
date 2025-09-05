@@ -30,15 +30,18 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PKG_GH_READ }}
 
-      - name: Build
+      - name: Build (uploads sourcemaps via Sentry Vite Plugin)
         run: npm run build
         env:
+          # Sentry auth and project info (configure these as GitHub Secrets)
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          # Optionally tie the release to the tag name
+          SENTRY_RELEASE: ${{ github.event.release.tag_name }}
+          # Ensure production build path
           NODE_ENV: production
 
-      - name: Deploy to Netlify (prod)
-        uses: netlify/actions/cli@v4
+      - uses: netlify/actions/cli@master
         with:
-          args: deploy --dir=dist --prod
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          args: deploy --dir=dist --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
