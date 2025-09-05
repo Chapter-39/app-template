@@ -1,0 +1,27 @@
+{
+  "task": "i18n sync: scan literals and update language files (no commits)",
+  "instructions": [
+    "Stay on the current branch. Do NOT create branches. Do NOT commit. Do NOT push.",
+    "Scope: Only touch files inside src/languages/. Read-only everywhere else.",
+    "Scan all source files under src/ recursively (ts, tsx, js, jsx, vue, svelte, html, astro) and collect every string literal used as the first argument of i18n calls like t(\"...\") or t('...'). Treat the content inside the quotes as the canonical key. Ignore variables or template literals (t(keyVar), t(`...${x}`)).",
+    "Normalize collected keys by trimming whitespace and collapsing internal whitespace. Keep case-sensitive.",
+    "Detect the language files in src/languages/. Assume there are exactly three files (e.g., en.json, es.json, sr.json). Treat them as flat or nested JSON maps. Preserve nesting when present.",
+    "Choose a base language file: prefer en*.json if present; otherwise use the first language file sorted by filename.",
+    "For each collected key that does not exist in a language file:",
+    "  - In the base language: set value equal to the key (identity default).",
+    "  - In the other languages: add the key with an empty string \"\" and leave a translator hint comment if the format supports it; if JSON, do not add comments.",
+    "For each key present in any language file but NOT found in code (unused): remove it from all language files.",
+    "Keep language file ordering stable and deterministic: sort keys alphabetically by full path (dot notation for nested).",
+    "Preserve JSON formatting: 2 spaces, LF line endings, no trailing commas, final newline.",
+    "Generate a dry-run report before writing changes showing: total collected keys, per-language counts of added/removed/kept keys, and a short sample list for each category.",
+    "Implement as a Node script at scripts/i18n-sync.ts. Use TypeScript, no third-party deps unless already present. Safe file IO with backups: write to a temp file then atomic rename.",
+    "Edge cases to handle: duplicate keys differing only by surrounding whitespace; escaped quotes in keys; duplicate entries across nested structures; files with BOM; missing src/languages folder -> fail with clear message.",
+    "Run locally and show the dry-run output. Then apply changes. Do NOT stage files.",
+    "Validation: run `npm run lint` and `npm run format` (or the project's equivalents) after writing. If lint/format alters files under src/languages, accept those changes silently (still no git actions).",
+    "Deliverables:",
+    "  - scripts/i18n-sync.ts implemented.",
+    "  - Updated JSON files in src/languages/* with keys added/removed as specified.",
+    "  - Printed dry-run and summary of changes in the terminal.",
+    "Absolutely no git commit or push."
+  ]
+}

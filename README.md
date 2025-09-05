@@ -140,96 +140,60 @@ npm run test:e2e -- --debug
 
 ---
 
-## 🔐 Variables de entorno y Secrets (GitHub Actions)
+## 🔐 Environment Variables and Secrets (GitHub Actions)
 
-Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`import.meta.env.*`) y `process.env.*` durante build/configuración. En CI, estas variables deben estar definidas como GitHub Action Secrets.
+This project uses Vite and reads variables with the `VITE_*` prefix on the client (`import.meta.env.*`) and `process.env.*` during build/configuration. In CI, these variables must be defined as GitHub Action Secrets.
 
-### Variables requeridas/optativas
+### Required/Optional Variables
 
-- VITE_APP_NAME: Nombre de la aplicación. Requerida. También usada por Capacitor.
-- VITE_APP_VERSION: Versión de la app (semver). Requerida.
-- VITE_APP_ENV: Entorno (`development` | `staging` | `production`). Requerida.
-- VITE_API_URL: URL base del API (https). Requerida.
-- VITE_API_WS_URI: URL de WebSocket del API (wss). Requerida.
-- VITE_APPLE_TEAM_ID: Apple Developer Team ID. Requerida.
-- VITE_APPLE_BUNDLE_ID: Bundle ID de la app. Requerida.
-- VITE_APPLE_SERVICE_ID: Service ID para Sign in with Apple (web). Requerida para login web.
-- VITE_APPLE_REDIRECT_URI: Redirect URI configurado en el backend/Apple. Requerida.
-- VITE_APPLE_SCOPE: Scopes solicitados (por ej. `name email`). Requerida.
-- VITE_SENTRY_DSN: DSN de Sentry para errores en runtime del cliente. Opcional pero recomendado en producción.
-- VITE_SENTRY_ORG: Organización de Sentry. Requerida si se suben sourcemaps en CI.
-- VITE_SENTRY_PROJECT: Proyecto de Sentry. Requerida si se suben sourcemaps en CI.
-- SENTRY_AUTH_TOKEN: Token de Sentry para subir sourcemaps (scopes típicos: `project:write`, `org:read`). Requerida si se suben sourcemaps en CI.
-- VITE_SERVER_ORIGIN: Origin público usado por el dev/preview server. Opcional.
-- VITE_SERVER_ALLOWED_HOSTS: Lista separada por comas de hosts permitidos. Opcional.
-- PKG_GH_READ: Token de GitHub con `read:packages` (y `repo` si aplica). Usado por CI para autenticar `npm ci` contra GitHub Packages (inyectado como `NODE_AUTH_TOKEN`).
-- GITHUB_TOKEN: Proporcionado automáticamente por GitHub Actions (no requiere configuración). Usado por el flujo de verificación del título del PR.
+- VITE_APP_NAME: Application name. Required. Also used by Capacitor.
+- VITE_APP_VERSION: App version (semver). Required.
+- VITE_APP_ENV: Environment (`development` | `staging` | `production`). Required.
+- VITE_API_URL: Base API URL (https). Required.
+- VITE_API_WS_URI: API WebSocket URL (wss). Required.
+- VITE_APPLE_TEAM_ID: Apple Developer Team ID. Required.
+- VITE_APPLE_BUNDLE_ID: App Bundle ID. Required.
+- VITE_APPLE_SERVICE_ID: Service ID for Sign in with Apple (web). Required for web login.
+- VITE_APPLE_REDIRECT_URI: Redirect URI configured in the backend/Apple. Required.
+- VITE_APPLE_SCOPE: Requested scopes (e.g., `name email`). Required.
+- VITE_SENTRY_DSN: Sentry DSN for runtime client errors. Optional but recommended in production.
+- SENTRY_ORG: Sentry organization. Required if uploading sourcemaps in CI.
+- SENTRY_PROJECT: Sentry project. Required if uploading sourcemaps in CI.
+- SENTRY_AUTH_TOKEN: Sentry token for uploading sourcemaps (typical scopes: `project:write`, `org:read`). Required if uploading sourcemaps in CI.
+- VITE_SERVER_ORIGIN: Public origin used by the dev/preview server. Optional.
+- VITE_SERVER_ALLOWED_HOSTS: Comma-separated list of allowed hosts. Optional.
+- PKG_GH_READ: GitHub token with `read:packages` (and `repo` if applicable). Used by CI to authenticate `npm ci` against GitHub Packages (injected as `NODE_AUTH_TOKEN`).
+- GITHUB_TOKEN: Automatically provided by GitHub Actions (no configuration required). Used by the PR title verification workflow.
 
-Notas de uso:
+Usage Notes:
 
-- El plugin de Sentry en `vite.config.ts` se ejecuta durante `build` y requiere `SENTRY_AUTH_TOKEN`, `VITE_SENTRY_ORG` y `VITE_SENTRY_PROJECT` para subir sourcemaps. Si no se necesita Sentry en CI, configure estos secretos igualmente (con valores válidos) o adapte el pipeline fuera de mantenimiento.
-- El server de Vite usa `VITE_SERVER_*` solo en desarrollo/preview; son opcionales para build.
+- The Sentry plugin in `vite.config.ts` runs during `build` and requires `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` to upload sourcemaps. If Sentry is not needed in CI, configure these secrets anyway (with valid values) or adapt the pipeline outside of maintenance.
+- The Vite server uses `VITE_SERVER_*` only in development/preview; they are optional for build.
 
-### Qué falta en tu configuración actual
+### How to Configure GitHub Action Secrets
 
-Has creado: `PERSONAL_ACCESS_TOKEN`, `VITE_API_URL`, `VITE_API_WS_URI`, `VITE_APPLE_BUNDLE_ID`, `VITE_APPLE_REDIRECT_URI`, `VITE_APPLE_SCOPE`, `VITE_APPLE_TEAM_ID`, `VITE_APP_ENV`, `VITE_APP_NAME`, `VITE_APP_VERSION`.
+Option A — from the web interface:
 
-Pendientes por añadir para que todo el proyecto quede cubierto:
+- Repository Settings → Secrets and variables → Actions → New repository secret → add each key above with its value.
 
-- VITE_APPLE_SERVICE_ID
-- VITE_SENTRY_ORG
-- VITE_SENTRY_PROJECT
-- VITE_SENTRY_DSN
-- SENTRY_AUTH_TOKEN
-- (Opcional) VITE_SERVER_ORIGIN
-- (Opcional) VITE_SERVER_ALLOWED_HOSTS
+Option B — with GitHub CLI (`gh`):
 
-### Cómo configurar GitHub Action Secrets
-
-Opción A — desde la interfaz web:
-
-- Repository Settings → Secrets and variables → Actions → New repository secret → añadir cada clave anterior con su valor.
-
-Opción B — con GitHub CLI (`gh`):
-
-- Ejecuta estos comandos desde la raíz del repo, sustituyendo los valores de ejemplo por los tuyos.
+- Run these commands from the repo root, replacing the example values with your own.
 
 ```sh
-# Core
-gh secret set VITE_APP_NAME --body "MiApp"
-gh secret set VITE_APP_VERSION --body "0.1.0"
-gh secret set VITE_APP_ENV --body "production"
+# Netlify
+gh secret set NETLIFY_AUTH_TOKEN --body "<body>"
+gh secret set NETLIFY_SITE_ID --body "<body>"
 
-# API / WebSocket
-gh secret set VITE_API_URL --body "https://api.ejemplo.com"
-gh secret set VITE_API_WS_URI --body "wss://api.ejemplo.com/ws"
-
-# Apple Sign In
-gh secret set VITE_APPLE_TEAM_ID --body "AB12C3D45E"
-gh secret set VITE_APPLE_BUNDLE_ID --body "com.ejemplo.app"
-gh secret set VITE_APPLE_SERVICE_ID --body "com.ejemplo.web"
-gh secret set VITE_APPLE_REDIRECT_URI --body "https://api.ejemplo.com/auth/apple/callback"
-gh secret set VITE_APPLE_SCOPE --body "name email"
-
-# Sentry (para sourcemaps en build y DSN en runtime)
-gh secret set VITE_SENTRY_ORG --body "mi-org"
-gh secret set VITE_SENTRY_PROJECT --body "mi-proyecto"
-gh secret set VITE_SENTRY_DSN --body "https://<public>@o<org>.ingest.sentry.io/<project>"
-gh secret set SENTRY_AUTH_TOKEN --body "sntrys_..."
-
-# Vite server (opcional)
-gh secret set VITE_SERVER_ORIGIN --body "https://app.ejemplo.com"
-gh secret set VITE_SERVER_ALLOWED_HOSTS --body "localhost,app.ejemplo.com"
+# Sentry
+gh secret set SENTRY_AUTH_TOKEN --body "<body>"
+gh secret set SENTRY_ORG --body "<body>"
+gh secret set SENTRY_PROJECT --body "<body>"
 
 # GitHub Packages (CI)
-# Usa tu token personal con scope read:packages (el workflow lo inyecta como NODE_AUTH_TOKEN)
-gh secret set PERSONAL_ACCESS_TOKEN --body "ghp_..."
+# GH PAT with scope read:packages (workflow injects it as NODE_AUTH_TOKEN)
+gh secret set PKG_GH_READ --body "ghp_..."
 ```
-
-Consejos de seguridad:
-
-- No subas `.env` con valores reales al repositorio. Usa Secrets para CI y `.env` local solo en desarrollo.
-- Revisa los scopes del token de Sentry y del token personal de GitHub para que sean mínimos y adecuados.
 
 ---
 

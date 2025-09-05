@@ -1,7 +1,7 @@
 <template>
   <div class="the-local-mode">
     <button @click="setMode('local')">
-      {{ t("or Continue without account") }}
+      {{ t("continue without account") }}
     </button>
   </div>
 </template>

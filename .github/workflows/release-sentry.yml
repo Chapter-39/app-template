@@ -35,8 +35,8 @@ jobs:
         env:
           # Sentry auth and project info (configure these as GitHub Secrets)
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          VITE_SENTRY_ORG: ${{ secrets.VITE_SENTRY_ORG }}
-          VITE_SENTRY_PROJECT: ${{ secrets.VITE_SENTRY_PROJECT }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
           # Optionally tie the release to the tag name
           SENTRY_RELEASE: ${{ github.event.release.tag_name }}
           # Ensure production build path
