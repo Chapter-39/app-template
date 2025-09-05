@@ -157,8 +157,8 @@ Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`impo
 - VITE_APPLE_REDIRECT_URI: Redirect URI configurado en el backend/Apple. Requerida.
 - VITE_APPLE_SCOPE: Scopes solicitados (por ej. `name email`). Requerida.
 - VITE_SENTRY_DSN: DSN de Sentry para errores en runtime del cliente. Opcional pero recomendado en producción.
-- VITE_SENTRY_ORG: Organización de Sentry. Requerida si se suben sourcemaps en CI.
-- VITE_SENTRY_PROJECT: Proyecto de Sentry. Requerida si se suben sourcemaps en CI.
+- SENTRY_ORG: Organización de Sentry. Requerida si se suben sourcemaps en CI.
+- SENTRY_PROJECT: Proyecto de Sentry. Requerida si se suben sourcemaps en CI.
 - SENTRY_AUTH_TOKEN: Token de Sentry para subir sourcemaps (scopes típicos: `project:write`, `org:read`). Requerida si se suben sourcemaps en CI.
 - VITE_SERVER_ORIGIN: Origin público usado por el dev/preview server. Opcional.
 - VITE_SERVER_ALLOWED_HOSTS: Lista separada por comas de hosts permitidos. Opcional.
@@ -167,7 +167,7 @@ Este proyecto usa Vite y lee variables con prefijo `VITE_*` en el cliente (`impo
 
 Notas de uso:
 
-- El plugin de Sentry en `vite.config.ts` se ejecuta durante `build` y requiere `SENTRY_AUTH_TOKEN`, `VITE_SENTRY_ORG` y `VITE_SENTRY_PROJECT` para subir sourcemaps. Si no se necesita Sentry en CI, configure estos secretos igualmente (con valores válidos) o adapte el pipeline fuera de mantenimiento.
+- El plugin de Sentry en `vite.config.ts` se ejecuta durante `build` y requiere `SENTRY_AUTH_TOKEN`, `SENTRY_ORG` y `SENTRY_PROJECT` para subir sourcemaps. Si no se necesita Sentry en CI, configure estos secretos igualmente (con valores válidos) o adapte el pipeline fuera de mantenimiento.
 - El server de Vite usa `VITE_SERVER_*` solo en desarrollo/preview; son opcionales para build.
 
 ### Qué falta en tu configuración actual
@@ -177,8 +177,8 @@ Has creado: `PERSONAL_ACCESS_TOKEN`, `VITE_API_URL`, `VITE_API_WS_URI`, `VITE_AP
 Pendientes por añadir para que todo el proyecto quede cubierto:
 
 - VITE_APPLE_SERVICE_ID
-- VITE_SENTRY_ORG
-- VITE_SENTRY_PROJECT
+- SENTRY_ORG
+- SENTRY_PROJECT
 - VITE_SENTRY_DSN
 - SENTRY_AUTH_TOKEN
 - (Opcional) VITE_SERVER_ORIGIN
@@ -212,8 +212,8 @@ gh secret set VITE_APPLE_REDIRECT_URI --body "https://api.ejemplo.com/auth/apple
 gh secret set VITE_APPLE_SCOPE --body "name email"
 
 # Sentry (para sourcemaps en build y DSN en runtime)
-gh secret set VITE_SENTRY_ORG --body "mi-org"
-gh secret set VITE_SENTRY_PROJECT --body "mi-proyecto"
+gh secret set SENTRY_ORG --body "mi-org"
+gh secret set SENTRY_PROJECT --body "mi-proyecto"
 gh secret set VITE_SENTRY_DSN --body "https://<public>@o<org>.ingest.sentry.io/<project>"
 gh secret set SENTRY_AUTH_TOKEN --body "sntrys_..."
 

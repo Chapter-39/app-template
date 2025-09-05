@@ -130,7 +130,7 @@ src/
 - **VITE_APP_ENV:** Application environment
 - **VITE_APPLE_BUNDLE_ID:** Bundle ID for iOS
 - **VITE_APP_NAME:** Application name
-- **VITE_SENTRY_ORG/PROJECT:** Sentry configuration
+- **SENTRY_ORG/PROJECT:** Sentry configuration
 
 ## 🔄 Project Status
 

@@ -29,5 +29,5 @@ export default {
   Settings: "Подешавања",
   Spanish: "Шпански",
   Theme: "Тема",
-  "or Continue without account": "или Наставите без налога",
+  "continue without account": "или Наставите без налога",
 };

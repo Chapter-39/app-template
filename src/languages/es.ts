@@ -29,5 +29,5 @@ export default {
   Settings: "Ajustes",
   Spanish: "Español",
   Theme: "Tema",
-  "or Continue without account": "o Continuar sin cuenta",
+  "continue without account": "o Continuar sin cuenta",
 };
