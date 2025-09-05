@@ -26,7 +26,6 @@ This repository is in maintenance mode. We accept critical bug fixes, security p
 
 - **Node.js** `>=20`
 - **npm** `>=9` (or **pnpm/yarn**)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) installed (and **Vetur** disabled).
 - **Capacitor** (`@capacitor/core`, `@capacitor/cli`) for mobile integration.
 
 ---
