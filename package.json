@@ -25,7 +25,9 @@
     "prepare": "husky",
     "preview": "vite preview",
     "test:e2e": "CI=1 playwright test",
-    "test:unit": "vitest --run --coverage",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest --run",
+    "test:coverage": "vitest --run --coverage",
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
@@ -94,5 +96,8 @@
       "prettier --write",
       "stylelint --fix"
     ]
+  },
+  "changelog": {
+    "1.0.0": "Initial release."
   }
 }

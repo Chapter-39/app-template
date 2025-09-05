@@ -103,6 +103,7 @@ onMounted(getDevice);
 | `npm run dev`              | Start development server with hot reload. |
 | `npm run build`            | Build and minify for production.          |
 | `npm run preview`          | Preview the production build locally.     |
+| `npm test`                 | Run unit tests with coverage (alias).     |
 | `npm run test:unit`        | Run unit tests with coverage (Vitest).    |
 | `npm run test:e2e`         | Run end-to-end tests with Playwright.     |
 | `npm run lint`             | Lint and fix code with ESLint.            |
