@@ -194,6 +194,7 @@ gh secret set SENTRY_PROJECT --body "<body>"
 # GH PAT with scope read:packages (workflow injects it as NODE_AUTH_TOKEN)
 gh secret set PKG_GH_READ --body "ghp_..."
 ```
+
 ---
 
 ## 📂 Project structure
