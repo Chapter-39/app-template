@@ -16,8 +16,8 @@ const envSchema = z.object({
     .string()
     .regex(/^https?:\/\/.+/, "VITE_APPLE_REDIRECT_URI must be a valid URL"),
   VITE_APPLE_SCOPE: z.string().min(3, "VITE_APPLE_SCOPE is required"),
-  VITE_SERVER_ORIGIN: z.string().optional(),
-  VITE_SERVER_ALLOWED_HOSTS: z.string().optional(),
+  SERVER_ORIGIN: z.string().optional(),
+  SERVER_ALLOWED_HOSTS: z.string().optional(),
   SENTRY_ORG: z.string().optional(),
   SENTRY_PROJECT: z.string().optional(),
   VITE_SENTRY_DSN: z.string().optional(),

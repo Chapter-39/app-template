@@ -16,3 +16,8 @@
   @include mixins.no-drag;
   @include mixins.safe-area-padding;
 }
+
+body {
+  background-color: var(--rgba-background);
+  color: var(--rgba-text);
+}

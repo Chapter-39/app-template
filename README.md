@@ -160,8 +160,8 @@ This project uses Vite and reads variables with the `VITE_*` prefix on the clien
 - SENTRY_ORG: Sentry organization. Required if uploading sourcemaps in CI.
 - SENTRY_PROJECT: Sentry project. Required if uploading sourcemaps in CI.
 - SENTRY_AUTH_TOKEN: Sentry token for uploading sourcemaps (typical scopes: `project:write`, `org:read`). Required if uploading sourcemaps in CI.
-- VITE_SERVER_ORIGIN: Public origin used by the dev/preview server. Optional.
-- VITE_SERVER_ALLOWED_HOSTS: Comma-separated list of allowed hosts. Optional.
+- SERVER_ORIGIN: Public origin used by the dev/preview server. Optional.
+- SERVER_ALLOWED_HOSTS: Comma-separated list of allowed hosts. Optional.
 - PKG_GH_READ: GitHub token with `read:packages` (and `repo` if applicable). Used by CI to authenticate `npm ci` against GitHub Packages (injected as `NODE_AUTH_TOKEN`).
 - GITHUB_TOKEN: Automatically provided by GitHub Actions (no configuration required). Used by the PR title verification workflow.
 
