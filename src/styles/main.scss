@@ -4,6 +4,12 @@
 @use "@chapter-39/shared-template/styles/colors/increased-contrast-light" as *;
 @use "@/styles/variables";
 @use "@/styles/mixins";
+@use "@/styles/type";
+
+body {
+  background-color: var(--rgba-background);
+  color: var(--rgba-text);
+}
 
 .top-right-cta {
   top: variables.$grid * 2;
@@ -17,7 +23,8 @@
   @include mixins.safe-area-padding;
 }
 
-body {
-  background-color: var(--rgba-background);
-  color: var(--rgba-text);
+.view-title {
+  @extend %type-large-title;
+
+  margin-bottom: variables.$grid * 2;
 }
