@@ -26,7 +26,7 @@ describe("authGuard", () => {
       useAuthStore: () => ({ isAuthenticated: { value: true } }),
     }));
     vi.doMock("@/stores/settings/mode", () => ({
-      useModeStore: () => ({ isLocalMode: { value: false } }),
+      useModeStore: () => ({ isLocalMode: false }),
     }));
 
     const router = (await import("@/router")).default;
