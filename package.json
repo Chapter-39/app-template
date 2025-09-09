@@ -98,7 +98,7 @@
     ]
   },
   "changelog": {
-    "1.1.1": "Added enviroment variable for Apple Sign In.",
+    "1.1.1": "Added environment variable for Apple Sign In.",
     "1.1.0": "Updated dependencies and improved i18n sync script.",
     "1.0.1": "Fixed minor bugs and updated documentation.",
     "1.0.0": "Initial release."
