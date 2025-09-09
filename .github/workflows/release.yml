@@ -33,6 +33,12 @@ jobs:
       - name: Build (uploads sourcemaps via Sentry Vite Plugin)
         run: npm run build
         env:
+          # Apple Sign In environment variables (configure these as GitHub Secrets)
+          VITE_APPLE_TEAM_ID: ${{ secrets.VITE_APPLE_TEAM_ID }}
+          VITE_APPLE_BUNDLE_ID: ${{ secrets.VITE_APPLE_BUNDLE_ID }}
+          VITE_APPLE_SERVICE_ID: ${{ secrets.VITE_APPLE_SERVICE_ID }}
+          VITE_APPLE_REDIRECT_URI: ${{ secrets.VITE_APPLE_REDIRECT_URI }}
+          VITE_APPLE_SCOPE: ${{ secrets.VITE_APPLE_SCOPE }}
           # Sentry auth and project info (configure these as GitHub Secrets)
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
