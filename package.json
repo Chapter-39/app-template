@@ -1,6 +1,6 @@
 {
   "name": "@chapter-39/app-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hybrid mobile app template using Vue 3, Vite, Capacitor, Pinia, i18n, Sentry, Playwright, Vitest, ESLint, Prettier, Stylelint, Husky and more.",
   "private": true,
   "type": "module",
@@ -98,6 +98,7 @@
     ]
   },
   "changelog": {
+    "1.1.1": "Added enviroment variable for Apple Sign In.",
     "1.1.0": "Updated dependencies and improved i18n sync script.",
     "1.0.1": "Fixed minor bugs and updated documentation.",
     "1.0.0": "Initial release."
