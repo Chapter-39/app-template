@@ -14,6 +14,7 @@ concurrency:
 jobs:
   deploy:
     name: Build and deploy to Netlify
+    environment: production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,15 +35,15 @@ jobs:
         run: npm run build
         env:
           # Apple Sign In environment variables (configure these as GitHub Secrets)
-          VITE_APPLE_TEAM_ID: ${{ secrets.VITE_APPLE_TEAM_ID }}
-          VITE_APPLE_BUNDLE_ID: ${{ secrets.VITE_APPLE_BUNDLE_ID }}
-          VITE_APPLE_SERVICE_ID: ${{ secrets.VITE_APPLE_SERVICE_ID }}
-          VITE_APPLE_REDIRECT_URI: ${{ secrets.VITE_APPLE_REDIRECT_URI }}
-          VITE_APPLE_SCOPE: ${{ secrets.VITE_APPLE_SCOPE }}
+          VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
+          VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
+          VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
+          VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
+          VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
           # Sentry auth and project info (configure these as GitHub Secrets)
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
           # Optionally tie the release to the tag name
           SENTRY_RELEASE: ${{ github.event.release.tag_name }}
           # Ensure production build path
