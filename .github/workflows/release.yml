@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 concurrency:
   group: netlify-release-${{ github.event.release.tag_name }}
@@ -23,7 +24,10 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@chapter-39'
+          always-auth: true
           cache: npm
 
       - name: Install
