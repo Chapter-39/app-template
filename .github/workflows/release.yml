@@ -1,4 +1,4 @@
-name: Release Netlify Deploy
+name: Deploy release to Netlify
 
 on:
   release:
@@ -14,9 +14,23 @@ concurrency:
 
 jobs:
   deploy:
-    name: Build and deploy to Netlify
+    name: Deploy Job
     environment: production
     runs-on: ubuntu-latest
+    env:
+      # Build-time env para Vite
+      VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
+      VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
+      VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
+      VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
+      VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
+      # Sentry y Node
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+      SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+      SENTRY_RELEASE: ${{ github.event.release.tag_name }}
+      NODE_ENV: production
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,10 +38,7 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@chapter-39"
-          always-auth: true
+          node-version: 20
           cache: npm
 
       - name: Install
@@ -35,24 +46,15 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PKG_GH_READ }}
 
+      - name: Assert Vite env
+        run: |
+          echo "VITE_APPLE_TEAM_ID=$VITE_APPLE_TEAM_ID"
+          node -e "console.log('node sees', process.env.VITE_APPLE_TEAM_ID || 'undefined')"
+
       - name: Build (uploads sourcemaps via Sentry Vite Plugin)
         run: npm run build
-        env:
-          # Apple Sign In environment variables (configure these as GitHub Secrets)
-          VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
-          VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
-          VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
-          VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
-          VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
-          # Sentry auth and project info (configure these as GitHub Secrets)
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
-          # Optionally tie the release to the tag name
-          SENTRY_RELEASE: ${{ github.event.release.tag_name }}
-          # Ensure production build path
-          NODE_ENV: production
 
-      - uses: netlify/actions/cli@master
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
         with:
           args: deploy --dir=dist --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}
