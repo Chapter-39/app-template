@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
@@ -37,6 +38,16 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
+          VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
+          VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
+          VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
+          VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+          SENTRY_RELEASE: pr-${{ github.event.number }}
 
       - name: Unit Tests
         run: npm run test:unit
@@ -46,3 +57,12 @@ jobs:
 
       - name: e2e Test
         run: npm run test:e2e
+
+      - name: Deploy preview to Netlify
+        run: |
+          npx -y netlify-cli@17 deploy \
+            --dir=dist \
+            --site "${{ secrets.NETLIFY_SITE_ID }}" \
+            --auth "${{ secrets.NETLIFY_AUTH_TOKEN }}" \
+            --alias "pr-${{ github.event.number }}" \
+            --message "PR #${{ github.event.number }} - ${{ github.sha }}"
