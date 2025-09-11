@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Build-time env para Vite
+      HUSKY: 0
       VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
       VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
       VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
