@@ -57,7 +57,7 @@ jobs:
 
       - name: e2e Test
         run: npm run test:e2e
-        
+
       - name: Deploy preview to Netlify
         run: |
           npx -y netlify-cli@17 deploy \
@@ -66,4 +66,3 @@ jobs:
             --auth "${{ secrets.NETLIFY_AUTH_TOKEN }}" \
             --alias "pr-${{ github.event.number }}" \
             --message "PR #${{ github.event.number }} - ${{ github.sha }}"
-
