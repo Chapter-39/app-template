@@ -15,20 +15,8 @@ concurrency:
 jobs:
   deploy:
     name: Deploy Job
-    environment: production
     runs-on: ubuntu-latest
-    env:
-      # Build-time env para Vite
-      VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
-      VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
-      VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
-      VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
-      VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
-      # Sentry y Node
-      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-      SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-      SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
-      SENTRY_RELEASE: ${{ github.event.release.tag_name }}
+    environment: production
 
     steps:
       - name: Checkout
@@ -52,6 +40,18 @@ jobs:
 
       - name: Build (uploads sourcemaps via Sentry Vite Plugin)
         run: npm run build
+        env:
+          # Build-time env para Vite
+          VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
+          VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
+          VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
+          VITE_APPLE_REDIRECT_URI: ${{ vars.VITE_APPLE_REDIRECT_URI }}
+          VITE_APPLE_SCOPE: ${{ vars.VITE_APPLE_SCOPE }}
+          # Sentry y Node
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+          SENTRY_RELEASE: ${{ github.event.release.tag_name }}
 
       - name: Deploy to Netlify (no build, no UI overrides)
         run: |
