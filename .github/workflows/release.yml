@@ -33,11 +33,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PKG_GH_READ }}
 
-      - name: Assert Vite env
-        run: |
-          echo "VITE_APPLE_TEAM_ID=$VITE_APPLE_TEAM_ID"
-          node -e "console.log('node sees', process.env.VITE_APPLE_TEAM_ID || 'undefined')"
-
       - name: Build (uploads sourcemaps via Sentry Vite Plugin)
         run: npm run build
         env:
