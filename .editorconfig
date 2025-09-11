@@ -5,5 +5,12 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.{toml,json,yml,yaml,md,mdx,html,svg,xml}]
+charset = utf-8
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = false
+
 end_of_line = lf
 max_line_length = 100
