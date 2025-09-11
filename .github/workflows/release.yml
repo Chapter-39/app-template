@@ -19,7 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Build-time env para Vite
-      HUSKY: 0
       VITE_APPLE_TEAM_ID: ${{ vars.VITE_APPLE_TEAM_ID }}
       VITE_APPLE_BUNDLE_ID: ${{ vars.VITE_APPLE_BUNDLE_ID }}
       VITE_APPLE_SERVICE_ID: ${{ vars.VITE_APPLE_SERVICE_ID }}
@@ -30,7 +29,6 @@ jobs:
       SENTRY_ORG: ${{ vars.SENTRY_ORG }}
       SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
       SENTRY_RELEASE: ${{ github.event.release.tag_name }}
-      NODE_ENV: production
 
     steps:
       - name: Checkout
