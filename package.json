@@ -38,7 +38,7 @@
     "@chapter-39/shared-template": "^0.3.1",
     "@sentry/vite-plugin": "^4.1.1",
     "@sentry/vue": "^10.1.0",
-    "axios": "^1.11.0",
+    "axios": "^1.12.0",
     "lucide-vue-next": "^0.539.0",
     "pinia": "^3.0.3",
     "vue": "^3.5.17",
@@ -79,7 +79,7 @@
     "stylelint-config-standard": "^39.0.0",
     "stylelint-scss": "^6.12.1",
     "typescript": "~5.9.2",
-    "vite": "^7.0.0",
+    "vite": "^7.1.5",
     "vite-plugin-vue-devtools": "^8.0.0",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.5"
